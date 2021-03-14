@@ -17,11 +17,20 @@ body {
   /*
    * CSS image reference example.
    */
-
 }
 
 .container {
   max-width: 1520px;
-  padding: 0px 40px;
+  min-width: 375px;
+  padding: 0px 30px;
   margin: auto;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 0px 40px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 1520px;
+    padding: 0px 40px;
+  }
 }

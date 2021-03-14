@@ -5,21 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Webpack Starter Kit</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header class="header">
       <div class="container">
-        <img src="./images/logoart.png" alt="" />
+        <div>
+          <a href="#" class="iconMenu">
+            <svg>
+              <use href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </a>
+          <img src="./images/logoart.png" alt="" />
+        </div>
+
         <nav class="nav">
-          <a href="" class="about">О нас</a>
-          <a href="" class="portfolio">Портфолио</a>
-          <a href="" class="price">Цены</a>
-          <a href="" class="contacts">Контакты</a>
+          <ul>
+            <li><a href="" class="about">О нас</a></li>
+            <li><a href="" class="portfolio">Портфолио</a></li>
+            <li><a href="" class="price">Цены</a></li>
+            <li><a href="" class="contacts">Контакты</a></li>
+          </ul>
         </nav>
-        <h1>interior wall painting</h1>
-        <img src="./images/girls.png" alt="" class="img-girls" />
       </div>
     </header>
+    <h1>interior wall painting</h1>
+    <img src="./images/girls.png" alt="" class="img-girls" />
   </body>
 </html>
