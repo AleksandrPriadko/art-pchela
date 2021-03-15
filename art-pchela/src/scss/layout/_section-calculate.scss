@@ -5,6 +5,14 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+.blockCalc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //position: relative;
+  padding-top: 29px;
+  padding-bottom: 46px;
+}
 .text-iwp {
   display: block;
   font-family: 'roboto';
@@ -17,20 +25,43 @@
   color: $color-black;
 
   margin-top: 0px;
-  margin-bottom: 19px;
+  margin-bottom: 17px;
 }
-.blockCalc {
-  padding-top: 29px;
-  padding-bottom: 46px;
+
+.text-painter-wall {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-bottom: 248px;
+
+  & span {
+    display: block;
+    width: 140px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: lowercase;
+
+    color: $color-black;
+  }
+  & p {
+    margin: 0px;
+  }
 }
-.blockCalc > span {
-  display: inline-block;
-  width: 168px;
+
+.btn-calc {
+  display: block;
+  background-color: $color-black;
+  border: 1px solid $color-black;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-  text-transform: lowercase;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-white;
 
-  color: $color-black;
+  padding: 22px 30px;
 }
