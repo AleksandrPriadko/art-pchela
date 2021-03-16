@@ -1,67 +1,71 @@
-.sectionCalc {
-  background-color: $color-yellow;
-  background-image: url('./images/girls.png');
-  background-position: left 0px top 220px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.blockCalc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  //position: relative;
-  padding-top: 29px;
-  padding-bottom: 46px;
-}
-.text-iwp {
-  display: block;
-  font-family: 'roboto';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 72px;
-  line-height: 80px;
-  text-transform: uppercase;
-  text-align: left;
-  color: $color-black;
-
-  margin-top: 0px;
-  margin-bottom: 17px;
-}
-
-.text-painter-wall {
-  display: flex;
-  justify-content: flex-end;
-
-  margin-bottom: 248px;
-
-  & span {
+@media screen and (max-width: 767px) {
+  .sectionCalc {
+    background-color: $color-yellow;
+    background-image: url('./images/girls.png');
+    background-position: left 0px top 220px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .blockCalc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //position: relative;
+    padding-top: 29px;
+    padding-bottom: 46px;
+  }
+  .text-iwp {
     display: block;
-    width: 140px;
+    font-family: $fontAvangard;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
-    text-transform: lowercase;
-
+    font-size: 72px;
+    line-height: 80px;
+    text-transform: uppercase;
+    text-align: left;
     color: $color-black;
-  }
-  & p {
-    margin: 0px;
-  }
-}
 
-.btn-calc {
-  display: block;
-  background-color: $color-black;
-  border: 1px solid $color-black;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $color-white;
+    margin-top: 0px;
+    margin-bottom: 17px;
+  }
 
-  padding: 22px 30px;
+  .text-painter-wall {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-bottom: 248px;
+
+    & span {
+      display: block;
+      width: 140px;
+      font-family: $fontAvangard;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      text-transform: lowercase;
+
+      color: $color-black;
+    }
+    & p {
+      margin: 0px;
+    }
+  }
+
+  .btn-calc {
+    display: block;
+    background-color: $color-black;
+    border: 1px solid $color-black;
+    font-family: $fontAvangard;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+
+    padding: 22px 30px;
+  }
 }

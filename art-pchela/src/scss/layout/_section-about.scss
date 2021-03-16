@@ -1,0 +1,177 @@
+.sectionAbout {
+  background-color: $color-black;
+
+  padding: 86px 0px 149px;
+}
+@media screen and (max-width: 767px) {
+  .about-heading {
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+
+    margin: 0px 0px 43px;
+  }
+  .serviceOffer {
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: $color-white;
+
+    margin: 0px 0px 35px;
+    &:nth-child(-n + 3) {
+      margin-bottom: 20px;
+    }
+  }
+  .jobExperience {
+    position: relative;
+  }
+  .blokExperience {
+    display: inline-block;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: $color-yellow;
+    padding: 185px 0px 70px;
+    & > div {
+      width: 80px;
+      height: 5px;
+
+      background-color: $color-yellow;
+
+      margin: 0px 0px 13px;
+    }
+    &-heading {
+      width: 106px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      text-transform: uppercase;
+
+      color: $color-white;
+      margin: 0;
+      &-year {
+        font-family: $fontAvangard;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 76px;
+        text-transform: uppercase;
+
+        color: $color-yellow;
+
+        margin: 0;
+      }
+    }
+  }
+  .blokPaintedWall {
+    position: absolute;
+    left: 157px;
+    display: inline-block;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: $color-yellow;
+    padding: 0px 0px 122px;
+    & > div {
+      width: 80px;
+      height: 5px;
+
+      background-color: $color-yellow;
+
+      margin: 0px 0px 13px;
+    }
+    &-heading-number {
+      font-family: $fontAvangard;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 76px;
+      text-transform: uppercase;
+
+      color: $color-yellow;
+      padding: 0px;
+      margin: 0px;
+      &::before {
+        content: 'более';
+        display: block;
+        font-family: $fontRoboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        text-transform: lowercase;
+
+        color: $color-white;
+      }
+    }
+    &-heading-text {
+      width: 143px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      text-transform: uppercase;
+
+      color: $color-white;
+      margin: 0px;
+    }
+  }
+  .amountPain {
+    position: absolute;
+    top: 152px;
+    right: 0px;
+    display: inline-block;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: $color-yellow;
+    padding: 127px 0px 74px;
+    & > div {
+      position: absolute;
+      top: 219px;
+      right: 14px;
+      width: 90px;
+      height: 5px;
+
+      background-color: $color-yellow;
+    }
+    &-number {
+      position: relative;
+      right: 0px;
+      font-family: $fontAvangard;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 76px;
+      text-transform: uppercase;
+
+      color: $color-yellow;
+      padding-left: 16px;
+      margin: 0px;
+      margin-bottom: 6px;
+      &::before {
+        content: 'более';
+        display: block;
+        font-family: $fontRoboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        text-transform: lowercase;
+
+        color: $color-white;
+        padding-left: 8px;
+      }
+    }
+    &-text {
+      width: 143px;
+      font-family: $fontRoboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      text-transform: uppercase;
+
+      color: $color-white;
+      margin: 0px;
+    }
+  }
+}

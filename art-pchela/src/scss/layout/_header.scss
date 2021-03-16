@@ -1,10 +1,12 @@
-.nav {
-  display: none;
-}
-.blokMenu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 52px;
-  padding-bottom: 19px;
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+  .blokMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 52px;
+    padding-bottom: 19px;
+  }
 }
