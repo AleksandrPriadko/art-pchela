@@ -1,8 +1,11 @@
 .sectionPrice {
+  position: relative;
   background-color: $color-black;
 }
 @media screen and (max-width: 767px) {
   .priceHeading {
+    //position: relative;
+    z-index: 1000;
     font-family: $fontRoboto;
     font-style: normal;
     font-weight: bold;
@@ -24,5 +27,72 @@
       color: $color-white;
       margin: 0px 0px 35px;
     }
+  }
+  .priceDecoration {
+    position: absolute;
+    z-index: 980;
+    top: 26px;
+    left: 158px;
+    width: 81px;
+    height: 4px;
+    background-color: $color-yellow;
+  }
+  .priceList {
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 114px;
+
+    &-items:nth-child(-n + 2) {
+      list-style: none;
+      margin: 0px 0px 88px;
+    }
+  }
+  .artPrice {
+    margin-bottom: 31px;
+  }
+  .artPainting {
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+
+    color: $color-white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0px 0px 20px;
+  }
+  .paintingPrice {
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: center;
+    color: $color-white;
+    margin: 0px 0px 20px;
+
+    & > span:nth-child(1) {
+      font-family: $fontAvangard;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      color: $color-yellow;
+    }
+
+    & > span:nth-child(2) {
+      font-family: $fontRoboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      color: $color-yellow;
+    }
+  }
+  .artAbout {
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: center;
+    color: $color-white;
+    margin: 0px;
   }
 }

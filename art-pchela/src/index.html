@@ -32,7 +32,7 @@
         <nav class="nav">
           <ul>
             <li><a href="#about" class="about">О нас</a></li>
-            <li><a href="" class="portfolio">Портфолио</a></li>
+            <li><a href="#price" class="portfolio">Портфолио</a></li>
             <li><a href="" class="price">Цены</a></li>
             <li><a href="" class="contacts">Контакты</a></li>
           </ul>
@@ -100,39 +100,40 @@
     </section>
     <section class="sectionPrice">
       <div class="container">
-        <h2 class="priceHeading">цена</h2>
+        <h2 class="priceHeading" id="price">цена<div class="priceDecoration"></div></h2>
+        
         <p class="priceHeading-text">
           Цена зависит от детализации эскиза, сложность прорисовки, передача
           света и тени для более реалистичного и объемного изображения.
         </p>
-        <ul>
-          <li>
+        <ul class="priceList">
+          <li class="priceList-items">
             <div>
-              <img src="#" alt="" />
-              <div>
-                <h3>Фон, надписи</h3>
-                <h4>от 800 ₴/м2</h4>
-                <p>Роспись небо, облака, граффити, надписи</p>
+              <img class="artPrice" src="./images/art-graphity.jpg" alt="" />
+              <div class="blokPrice">
+                <h3 class="artPainting">Фон, надписи</h3>
+                <h4 class="paintingPrice">от <span>800</span> <span>₴/м2</span></h4>
+                <p class="artAbout">Роспись небо, облака, граффити, надписи</p>
               </div>
             </div>
           </li>
-          <li>
+          <li class="priceList-items">
             <div>
-              <img src="#" alt="" />
-              <div>
-                <h3>Пейзажи</h3>
-                <h4>от 1200 ₴/м2</h4>
-                <p>Пейзаж, панорама, изображение архитектуры, детализация</p>
+              <img class="artPrice" src="./images/art-viking.jpg" alt="" />
+              <div class="blokPrice">
+                <h3 class="artPainting">Пейзажи</h3>
+                <h4 class="paintingPrice">от <span>1200</span> <span>₴/м2</span></h4>
+                <p class="artAbout">Пейзаж, панорама, изображение архитектуры, детализация</p>
               </div>
             </div>
           </li>
-          <li>
+          <li class="priceList-items">
             <div>
-              <img src="#" alt="" />
-              <div>
-                <h3>Изображения людей</h3>
-                <h4>от 1800 ₴/м2</h4>
-                <p>Детализированная роспись, композиция с фигурами людей</p>
+              <img class="artPrice" src="./images/art-girl.jpg" alt="" />
+              <div class="blokPrice">
+                <h3 class="artPainting">Изображения людей</h3>
+                <h4 class="paintingPrice">от <span>1800</span> <span>₴/м2</span></h4>
+                <p class="artAbout">Детализированная роспись, композиция с фигурами людей</p>
               </div>
             </div>
           </li>
