@@ -1,0 +1,29 @@
+.sectionPortfolio {
+  position: relative;
+  background-color: $color-black;
+  padding: 75px 0px 124px;
+}
+@media screen and (max-width: 767px) {
+  .portfolioHeading {
+    position: relative;
+    z-index: 999;
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $color-white;
+    margin: 0px;
+  }
+  .line {
+    position: absolute;
+    z-index: 950;
+    top: 102px;
+    left: 105px;
+    background-color: $color-yellow;
+    width: 184px;
+    height: 4px;
+  }
+}

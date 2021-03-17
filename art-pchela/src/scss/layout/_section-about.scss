@@ -1,10 +1,13 @@
 .sectionAbout {
+  position: relative;
   background-color: $color-black;
-
-  padding: 86px 0px 149px;
+  //z-index: 1;
+  padding: 86px 0px 125px;
 }
 @media screen and (max-width: 767px) {
   .about-heading {
+    position: relative;
+    z-index: 950;
     font-family: $fontRoboto;
     font-style: normal;
     font-weight: bold;
@@ -15,6 +18,16 @@
     color: $color-white;
 
     margin: 0px 0px 43px;
+
+    & + div {
+      position: absolute;
+      z-index: 900;
+      top: 112px;
+      left: 153px;
+      background-color: $color-yellow;
+      height: 4px;
+      width: 87px;
+    }
   }
   .serviceOffer {
     font-family: $fontRoboto;
@@ -171,6 +184,7 @@
       text-transform: uppercase;
 
       color: $color-white;
+      padding-left: 5px;
       margin: 0px;
     }
   }
