@@ -1,0 +1,57 @@
+.sectionPaintingCalc {
+  background-color: $color-black;
+}
+
+.paintingCalc-heading {
+  @media screen and (max-width: 767px) {
+    width: 315px;
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $color-white;
+    margin: 0px 0px 38px;
+  }
+}
+.paintingCalc-text {
+  @media screen and (max-width: 767px) {
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: $color-white;
+    margin: 0px 0px 30px;
+  }
+}
+
+.blockInput {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 20px;
+  }
+  & > span {
+    @media screen and (max-width: 767px) {
+      font-family: $fontRoboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 18px;
+      color: $color-white;
+      margin: 0px 0px 15px;
+    }
+  }
+}
+.data-input {
+  @media screen and (max-width: 767px) {
+    height: 58px;
+    background-color: $color-black;
+    border: 1px solid $color-yellow;
+  }
+}
