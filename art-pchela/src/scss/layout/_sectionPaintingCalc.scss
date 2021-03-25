@@ -4,7 +4,9 @@
 
 .paintingCalc-heading {
   @media screen and (max-width: 767px) {
-    width: 315px;
+    //width: 315px;
+    position: relative;
+    z-index: 3;
     font-family: $fontRoboto;
     font-style: normal;
     font-weight: bold;
@@ -17,6 +19,30 @@
     margin: 0px 0px 38px;
   }
 }
+.background {
+  position: relative;
+  z-index: 1;
+}
+
+.paintingCalc-line {
+  position: absolute;
+  z-index: 2;
+  top: 26px;
+  left: 72px;
+  background-color: $color-yellow;
+  width: 194px;
+  height: 4px;
+}
+.paintingCalc-lines {
+  position: absolute;
+  z-index: 2;
+  top: 60px;
+  left: 100px;
+  background-color: $color-yellow;
+  width: 137px;
+  height: 4px;
+}
+
 .paintingCalc-text {
   @media screen and (max-width: 767px) {
     font-family: $fontRoboto;
@@ -31,10 +57,12 @@
 }
 
 .blockInput {
+  &:nth-child(-n + 3) {
+    margin: 0px 0px 20px;
+  }
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
-    margin: 0px 0px 20px;
   }
   & > span {
     @media screen and (max-width: 767px) {
@@ -44,7 +72,7 @@
       font-size: 15px;
       line-height: 18px;
       color: $color-white;
-      margin: 0px 0px 15px;
+      margin: 0px 0px 13px;
     }
   }
 }
@@ -53,5 +81,51 @@
     height: 58px;
     background-color: $color-black;
     border: 1px solid $color-yellow;
+  }
+}
+.sketch {
+  @media screen and (max-width: 767px) {
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: $color-white;
+    margin: 0px 0px 13px;
+  }
+}
+.btn-louder-files {
+  display: block;
+  width: 315px;
+  background-color: $color-black;
+  border: 1px solid $color-yellow;
+  font-family: $fontRoboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: $color-white;
+
+  padding: 12px 47px;
+  margin-bottom: 49px;
+}
+.btn-submit {
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 315px;
+    background-color: $color-yellow;
+    border: 1px solid $color-yellow;
+    font-family: $fontRoboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-black;
+
+    padding: 18px 0px;
   }
 }
