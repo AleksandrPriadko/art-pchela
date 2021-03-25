@@ -1,0 +1,49 @@
+.sectionClients {
+  background-color: $color-black;
+  padding-bottom: 75px;
+}
+
+.clients-heading {
+  position: relative;
+  z-index: 3;
+  font-family: $fontRoboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $color-white;
+  padding: 0px 86px 0px;
+  margin: 0px 0px 50px;
+}
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+.companyLogo:nth-last-child(-n + 2) {
+  margin-top: 16px;
+}
+.clients-line {
+  position: absolute;
+  z-index: 2;
+  top: 26px;
+  left: 122px;
+  background-color: $color-yellow;
+  width: 93px;
+  height: 4px;
+}
+.clients-lines {
+  position: absolute;
+  z-index: 2;
+  top: 60px;
+  left: 96px;
+  background-color: $color-yellow;
+  width: 143px;
+  height: 4px;
+}
