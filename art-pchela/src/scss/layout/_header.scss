@@ -1,12 +1,52 @@
-@media screen and (max-width: 767px) {
-  .nav {
-    display: none;
+.header {
+  @media screen and (min-width: 768px) {
+    padding: 19px 0px;
   }
-  .blokMenu {
+}
+.blockHeader {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.blokMenu {
+  @media screen and (max-width: 767px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 52px;
     padding-bottom: 19px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 97px;
+  }
+}
+.nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+.navList {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    width: 525px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+.navLink {
+  @media screen and (min-width: 768px) {
+    //display: inline-block;
+    @include font($fontRoboto, normal, $color-black);
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: capitalize;
+    text-decoration: none;
   }
 }

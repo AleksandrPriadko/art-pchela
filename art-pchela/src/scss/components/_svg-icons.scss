@@ -8,12 +8,21 @@
 }
 
 .logoArt {
-  width: 67px;
-  height: 74px;
+  @media screen and (max-width: 767px) {
+    width: 67px;
+    height: 74px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 48px;
+    height: 54px;
+  }
 }
 
 .iconMenu {
-  display: block;
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 .iconInsta {
   width: 35px;

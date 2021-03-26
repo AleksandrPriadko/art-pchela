@@ -15,28 +15,29 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="blokMenu">
-          <a href="#" class="iconMenu">
-            <svg class="svg-menu">
-              <use href="./images/sprite-icons.svg#menu-1"></use>
-            </svg>
-          </a>
-          <img class="logoArt" src="./images/artpchela_logo.svg" alt="" />
-          <a href="#" class="iconMenu">
-            <svg class="svg-call">
-              <use href="./images/sprite-icons.svg#call-1"></use>
-            </svg>
-          </a>
+        <div class="blockHeader">
+          <div class="blokMenu">
+            <a href="#" class="iconMenu">
+              <svg class="svg-menu">
+                <use href="./images/sprite-icons.svg#menu-1"></use>
+              </svg>
+            </a>
+            <img class="logoArt" src="./images/artpchela_logo.svg" alt="" />
+            <a href="#" class="iconMenu">
+              <svg class="svg-call">
+                <use href="./images/sprite-icons.svg#call-1"></use>
+              </svg>
+            </a>
+          </div>
+          <nav class="nav">
+            <ul class="navList">
+              <li><a href="#about" class="navLink about">О нас</a></li>
+              <li><a href="#price" class="navLink portfolio">Портфолио</a></li>
+              <li><a href="#price" class="navLink price">Цены</a></li>
+              <li><a href="#contacts" class="navLink contacts">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
-
-        <nav class="nav">
-          <ul>
-            <li><a href="#about" class="about">О нас</a></li>
-            <li><a href="#price" class="portfolio">Портфолио</a></li>
-            <li><a href="" class="price">Цены</a></li>
-            <li><a href="" class="contacts">Контакты</a></li>
-          </ul>
-        </nav>
       </div>
     </header>
     <section class="sectionCalc">
@@ -46,7 +47,10 @@
           <div class="text-painter-wall">
             <p><span>Интерьерная роспись стен</span></p>
           </div>
-          <a href="#" class="btn-calc">просчитать роспись</a>
+          <div class="block-btn-calc">
+            <a href="#" class="btn-calc">просчитать роспись</a>
+          </div>
+
           <!-- <img src="./images/girls.png" alt="" class="img-girls" /> -->
         </div>
       </div>
@@ -232,7 +236,7 @@
       <div class="container">
         <h1 class="heading-kit">keep in touch</h1>
         <div class="blocSocials">
-          <div class="blockContaсts">
+          <div class="blockContaсts" id="contacts">
             <a class="mailLink" href="mailto:artpchela@gmail.com"
               >artpchela@gmail.com</a
             >

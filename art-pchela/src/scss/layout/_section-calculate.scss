@@ -1,74 +1,117 @@
-@media screen and (max-width: 767px) {
-  .sectionCalc {
-    background-color: $color-yellow;
-    background-image: url('./images/girls.png');
+.sectionCalc {
+  background-color: $color-yellow;
+  @media screen and (max-width: 767px) {
+    background-image: url('./images/girls-375.png');
     background-position: left 0px top 220px;
     background-size: contain;
     background-repeat: no-repeat;
   }
-  .blockCalc {
+  @media screen and (min-width: 768px) {
+    background-image: url('./images/girls-768.png');
+    background-position: left 0px top 216px;
+    //background-size: contain;
+    background-repeat: no-repeat;
+
+    padding: 15px 0px 336px;
+  }
+}
+.blockCalc {
+  @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    //position: relative;
     padding-top: 29px;
     padding-bottom: 46px;
   }
-  .text-iwp {
+  @media screen and (min-width: 768px) {
+    position: relative;
+  }
+}
+.text-iwp {
+  @media screen and (max-width: 767px) {
     display: block;
     @include font($fontAvangard, normal, $color-black);
-    // font-family: $fontAvangard;
-    // font-style: normal;
-    // font-weight: normal;
     font-size: 70px;
     line-height: 80px;
     text-transform: uppercase;
     text-align: left;
-    //color: $color-black;
-
     margin-top: 0px;
     margin-bottom: 17px;
   }
+  @media screen and (min-width: 768px) {
+    @include font($fontAvangard, normal, $color-black);
+    font-size: 150px;
+    line-height: 160px;
+    text-transform: uppercase;
 
-  .text-painter-wall {
+    margin: 0px 0px 40px;
+  }
+}
+
+.text-painter-wall {
+  @media screen and (max-width: 767px) {
     display: flex;
     justify-content: flex-end;
 
     margin-bottom: 248px;
-
-    & span {
+  }
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 175px;
+    left: 391px;
+  }
+  & span {
+    @media screen and (max-width: 767px) {
       display: block;
       width: 160px;
       @include font($fontAvangard, normal, $color-black);
-      // font-family: $fontAvangard;
-      // font-style: normal;
-      // font-weight: normal;
       font-size: 24px;
       line-height: 29px;
       text-transform: lowercase;
-
-      //color: $color-black;
     }
-    & p {
-      margin: 0px;
+    @media screen and (min-width: 768px) {
+      display: block;
+      width: 160px;
+      @include font($fontAvangard, normal, $color-black);
+      font-size: 24px;
+      line-height: 29px;
+      text-transform: lowercase;
     }
   }
-
-  .btn-calc {
+  & p {
+    margin: 0px;
+  }
+}
+.block-btn-calc {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.btn-calc {
+  @media screen and (max-width: 767px) {
     display: block;
     background-color: $color-black;
     border: 1px solid $color-black;
     @include font($fontAvangard, normal, $color-white);
-    // font-family: $fontAvangard;
-    // font-style: normal;
-    // font-weight: normal;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    //color: $color-white;
 
     padding: 22px 30px;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 224px;
+    background-color: $color-black;
+    @include font($fontAvangard, normal, $color-white);
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 24px 30px;
   }
 }
