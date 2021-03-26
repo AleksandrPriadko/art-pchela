@@ -1,5 +1,6 @@
 .footer {
   background-color: $color-yellow;
+  padding-bottom: 30px;
 }
 .heading-kit {
   display: block;
@@ -13,5 +14,62 @@
   color: $color-black;
 
   margin-top: 0px;
-  margin-bottom: 17px;
+  margin-bottom: 26px;
+}
+.blocSocials {
+  display: flex;
+  align-items: center;
+}
+.blockContaсts {
+  display: flex;
+  flex-direction: column;
+  margin-right: 35px;
+}
+.mailLink {
+  font-family: $fontRoboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+
+  color: $color-black;
+  margin-bottom: 15px;
+}
+.telLink {
+  font-family: $fontRoboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+
+  color: $color-black;
+}
+.blockSocSeti {
+  display: flex;
+  flex-direction: column;
+}
+.blockInsta {
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: $fontRoboto;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: $color-black;
+  margin-bottom: 20px;
+}
+.blockFacebook {
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: $fontRoboto;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: $color-black;
 }
