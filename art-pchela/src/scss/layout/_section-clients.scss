@@ -6,15 +6,16 @@
 .clients-heading {
   position: relative;
   z-index: 3;
-  font-family: $fontRoboto;
-  font-style: normal;
-  font-weight: bold;
+  @include font($fontRoboto, bold, $color-white);
+  // font-family: $fontRoboto;
+  // font-style: normal;
+  // font-weight: bold;
   font-size: 30px;
   line-height: 35px;
   text-align: center;
   text-transform: uppercase;
 
-  color: $color-white;
+  //color: $color-white;
   padding: 0px 86px 0px;
   margin: 0px 0px 50px;
 }

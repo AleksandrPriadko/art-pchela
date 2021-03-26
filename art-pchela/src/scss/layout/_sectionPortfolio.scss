@@ -7,14 +7,15 @@
   .portfolioHeading {
     position: relative;
     z-index: 999;
-    font-family: $fontRoboto;
-    font-style: normal;
-    font-weight: bold;
+    @include font($fontRoboto, bold, $color-white);
+    // font-family: $fontRoboto;
+    // font-style: normal;
+    // font-weight: bold;
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
 
-    color: $color-white;
+    //color: $color-white;
     margin: 0px;
   }
   .line {

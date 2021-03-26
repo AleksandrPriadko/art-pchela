@@ -16,14 +16,15 @@
   }
   .text-iwp {
     display: block;
-    font-family: $fontAvangard;
-    font-style: normal;
-    font-weight: normal;
+    @include font($fontAvangard, normal, $color-black);
+    // font-family: $fontAvangard;
+    // font-style: normal;
+    // font-weight: normal;
     font-size: 70px;
     line-height: 80px;
     text-transform: uppercase;
     text-align: left;
-    color: $color-black;
+    //color: $color-black;
 
     margin-top: 0px;
     margin-bottom: 17px;
@@ -38,14 +39,15 @@
     & span {
       display: block;
       width: 160px;
-      font-family: $fontAvangard;
-      font-style: normal;
-      font-weight: normal;
+      @include font($fontAvangard, normal, $color-black);
+      // font-family: $fontAvangard;
+      // font-style: normal;
+      // font-weight: normal;
       font-size: 24px;
       line-height: 29px;
       text-transform: lowercase;
 
-      color: $color-black;
+      //color: $color-black;
     }
     & p {
       margin: 0px;
@@ -56,15 +58,16 @@
     display: block;
     background-color: $color-black;
     border: 1px solid $color-black;
-    font-family: $fontAvangard;
-    font-style: normal;
-    font-weight: normal;
+    @include font($fontAvangard, normal, $color-white);
+    // font-family: $fontAvangard;
+    // font-style: normal;
+    // font-weight: normal;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: $color-white;
+    //color: $color-white;
 
     padding: 22px 30px;
   }
