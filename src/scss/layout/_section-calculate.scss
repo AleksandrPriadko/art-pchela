@@ -1,11 +1,11 @@
 .sectionCalc {
   background-color: $color-yellow;
-  @media screen and (max-width: 767px) {
-    background-image: url('./images/girls-375.png');
-    background-position: left 0px top 220px;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+  // @media screen and (max-width: 767px) {
+  //   background-image: url('./images/girls-375.png');
+  //   background-position: left 0px top 220px;
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  // }
   @media screen and (min-width: 768px) {
     background-image: url('./images/girls-768.png');
     background-position: left 0px top 216px;
@@ -15,9 +15,20 @@
     padding: 15px 0px 336px;
   }
 }
+.hero-img {
+  position: relative;
+}
+.img-girls {
+  display: block;
+  position: absolute;
+  top: 185px;
+  left: 0px;
+}
 .blockCalc {
   @media screen and (max-width: 767px) {
     display: flex;
+    position: relative;
+    z-index: 1;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 29px;
@@ -36,7 +47,7 @@
     text-transform: uppercase;
     text-align: left;
     margin-top: 0px;
-    margin-bottom: 17px;
+    margin-bottom: 10px;
   }
   @media screen and (min-width: 768px) {
     @include font($fontAvangard, normal, $color-black);
@@ -53,7 +64,7 @@
     display: flex;
     justify-content: flex-end;
 
-    margin-bottom: 248px;
+    margin-bottom: 210px;
   }
   @media screen and (min-width: 768px) {
     position: absolute;
