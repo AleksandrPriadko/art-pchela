@@ -7,10 +7,10 @@
   //   background-repeat: no-repeat;
   // }
   @media screen and (min-width: 768px) {
-    background-image: url('./images/girls-768.png');
-    background-position: left 0px top 216px;
-    //background-size: contain;
-    background-repeat: no-repeat;
+    // background-image: url('./images/girls-768.png');
+    // background-position: left 0px top 216px;
+    // //background-size: contain;
+    // background-repeat: no-repeat;
 
     padding: 15px 0px 336px;
   }
@@ -23,6 +23,10 @@
   position: absolute;
   top: 185px;
   left: 0px;
+  @media screen and (min-width: 768px) {
+    top: 208px;
+    //bottom: 0px;
+  }
 }
 .blockCalc {
   @media screen and (max-width: 767px) {

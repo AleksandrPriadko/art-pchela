@@ -42,7 +42,16 @@
     </header>
     <section class="sectionCalc">
       <div class="container hero-img">
-        <img src="./images/girls-375.png" alt="art girl" class="img-girls" />
+        <picture>
+          <source srcset="./images/girls-375.png" media="(max-width: 767px)" />
+          <source
+            srcset="./images/girls-517@1x.png 1x, ./images/girls-517@2x.png 2x"
+            media="(min-width: 1440px)"
+          />
+          <source srcset="./images/girls-768.png" media="(min-width: 768px)" />
+          <img src="./images/girls-375.png" alt="art girl" class="img-girls" />
+        </picture>
+        <!-- <img src="./images/girls-375.png" alt="art girl" class="img-girls" /> -->
         <div class="blockCalc">
           <h1 class="text-iwp">interior wall painting</h1>
           <div class="text-painter-wall">
