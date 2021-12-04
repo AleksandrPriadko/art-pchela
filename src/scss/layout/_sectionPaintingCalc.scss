@@ -29,8 +29,7 @@
     position: relative;
     z-index: 3;
     width: 334px;
-    // @include font($fontRoboto, bold, $color-white);
-    color: $color-white;
+    @include font($fontRoboto, bold, $color-white);
     font-size: 48px;
     line-height: 56px;
     text-transform: uppercase;
@@ -62,16 +61,13 @@
     @include font($fontRoboto, normal, $color-white);
     font-size: 15px;
     line-height: 18px;
-
-    //color: $color-white;
     margin: 0px 0px 30px;
   }
   @media screen and (min-width: 768px) {
-    //@include font($fontRoboto, normal, $color-white);
+    @include font($fontRoboto, normal, $color-white);
     width: 446px;
     font-size: 15px;
     line-height: 18px;
-    color: $color-white;
     margin: 0px 0px 70px;
   }
 }
@@ -99,14 +95,12 @@
       @include font($fontRoboto, normal, $color-white);
       font-size: 15px;
       line-height: 18px;
-      // color: $color-white;
       margin: 0px 0px 13px;
     }
     @media screen and (min-width: 768px) {
-      //@include font($fontRoboto, normal, $color-white);
+      @include font($fontRoboto, normal, $color-white);
       font-size: 18px;
       line-height: 18px;
-      color: $color-white;
       margin: 0px 0px 15px;
     }
   }
