@@ -1,17 +1,22 @@
 .sectionPaintingCalc {
   background-color: $color-black;
   padding-bottom: 117px;
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
+.background {
+  position: relative;
+  z-index: 1;
+}
 .paintingCalc-heading {
   @media screen and (max-width: 767px) {
     //width: 315px;
     position: relative;
     z-index: 3;
     @include font($fontRoboto, bold, $color-white);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: bold;
     font-size: 30px;
     line-height: 35px;
     text-align: center;
@@ -20,63 +25,89 @@
     //color: $color-white;
     margin: 0px 0px 38px;
   }
-}
-.background {
-  position: relative;
-  z-index: 1;
+  @media screen and (min-width: 768px) {
+    position: relative;
+    z-index: 3;
+    width: 334px;
+    // @include font($fontRoboto, bold, $color-white);
+    color: $color-white;
+    font-size: 48px;
+    line-height: 56px;
+    text-transform: uppercase;
+    margin: 0px 0px 60px;
+  }
 }
 
 .paintingCalc-line {
   position: absolute;
   z-index: 2;
-  top: 27px;
-  left: 71px;
+  top: 42px;
+  left: 16px;
   background-color: $color-yellow;
-  width: 194px;
-  height: 4px;
+  width: 310px;
+  height: 6px;
 }
 .paintingCalc-lines {
   position: absolute;
   z-index: 2;
-  top: 61px;
-  left: 100px;
+  top: 99px;
+  left: 16px;
   background-color: $color-yellow;
-  width: 137px;
-  height: 4px;
+  width: 221px;
+  height: 6px;
 }
 
 .paintingCalc-text {
   @media screen and (max-width: 767px) {
     @include font($fontRoboto, normal, $color-white);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: normal;
     font-size: 15px;
     line-height: 18px;
 
     //color: $color-white;
     margin: 0px 0px 30px;
   }
+  @media screen and (min-width: 768px) {
+    //@include font($fontRoboto, normal, $color-white);
+    width: 446px;
+    font-size: 15px;
+    line-height: 18px;
+    color: $color-white;
+    margin: 0px 0px 70px;
+  }
 }
-
+.formCalc {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .blockInput {
   &:nth-child(-n + 3) {
-    margin: 0px 0px 20px;
+    margin: 0px 0px 25px;
   }
   @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
   }
   & > span {
     @media screen and (max-width: 767px) {
       @include font($fontRoboto, normal, $color-white);
-      // font-family: $fontRoboto;
-      // font-style: normal;
-      // font-weight: normal;
       font-size: 15px;
       line-height: 18px;
       // color: $color-white;
       margin: 0px 0px 13px;
+    }
+    @media screen and (min-width: 768px) {
+      //@include font($fontRoboto, normal, $color-white);
+      font-size: 18px;
+      line-height: 18px;
+      color: $color-white;
+      margin: 0px 0px 15px;
     }
   }
 }
@@ -86,35 +117,53 @@
     background-color: $color-black;
     border: 1px solid $color-yellow;
   }
+  @media screen and (min-width: 768px) {
+    width: 566px;
+    height: 58px;
+    background-color: $color-black;
+    border: 1px solid $color-yellow;
+  }
 }
 .sketch {
   @media screen and (max-width: 767px) {
     @include font($fontRoboto, normal, $color-white);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: normal;
     font-size: 15px;
     line-height: 18px;
-    //color: $color-white;
     margin: 0px 0px 13px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 566px;
+    @include font($fontRoboto, normal, $color-white);
+    text-align: left;
+    font-size: 18px;
+    margin: 0px 0px 15px;
   }
 }
 .btn-louder-files {
-  display: block;
-  width: 315px;
-  background-color: $color-black;
-  border: 1px solid $color-yellow;
-  @include font($fontRoboto, normal, $color-white);
-  // font-family: $fontRoboto;
-  // font-style: normal;
-  // font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: center;
-  //color: $color-white;
-
-  padding: 12px 47px;
-  margin-bottom: 49px;
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 315px;
+    background-color: $color-black;
+    border: 1px solid $color-yellow;
+    @include font($fontRoboto, normal, $color-white);
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    padding: 12px 47px;
+    margin-bottom: 49px;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 566px;
+    height: 58px;
+    background-color: $color-black;
+    border: 1px solid $color-yellow;
+    @include font($fontRoboto, normal, $color-white);
+    font-size: 18px;
+    text-align: center;
+    padding: 12px 47px;
+    margin-bottom: 50px;
+  }
 }
 .btn-submit {
   @media screen and (max-width: 767px) {
@@ -123,16 +172,23 @@
     background-color: $color-yellow;
     border: 1px solid $color-yellow;
     @include font($fontRoboto, normal, $color-black);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    //color: $color-black;
-
+    padding: 18px 0px;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 566px;
+    background-color: $color-yellow;
+    border: 1px solid $color-yellow;
+    @include font($fontRoboto, normal, $color-black);
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
     padding: 18px 0px;
   }
 }
