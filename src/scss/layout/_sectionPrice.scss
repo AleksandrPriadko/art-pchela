@@ -7,26 +7,16 @@
     position: relative;
     z-index: 2;
     @include font($fontRoboto, bold, $color-white);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: bold;
     font-size: 30px;
     line-height: 35px;
     text-align: center;
     text-transform: uppercase;
-
-    //color: $color-white;
     margin: 0px 0px 36px;
 
     &-text {
       @include font($fontRoboto, normal, $color-white);
-      // font-family: $fontRoboto;
-      // font-style: normal;
-      // font-weight: normal;
       font-size: 15px;
       line-height: 18px;
-
-      //color: $color-white;
       margin: 0px 0px 35px;
     }
   }
@@ -54,52 +44,108 @@
   }
   .artPainting {
     @include font($fontRoboto, bold, $color-white);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: bold;
     font-size: 24px;
     text-align: center;
-
-    //color: $color-white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0px 0px 20px;
   }
   .paintingPrice {
     @include font($fontRoboto, normal, $color-white);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: normal;
     font-size: 15px;
     text-align: center;
-    //color: $color-white;
     margin: 0px 0px 20px;
 
     & > span:nth-child(1) {
       @include font($fontAvangard, normal, $color-yellow);
-      // font-family: $fontAvangard;
-      // font-style: normal;
-      // font-weight: normal;
       font-size: 36px;
-      //color: $color-yellow;
     }
 
     & > span:nth-child(2) {
       @include font($fontRoboto, normal, $color-yellow);
-      // font-family: $fontRoboto;
-      // font-style: normal;
-      // font-weight: normal;
       font-size: 15px;
-      //color: $color-yellow;
     }
   }
   .artAbout {
     @include font($fontRoboto, normal, $color-white);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: normal;
     font-size: 15px;
     text-align: center;
-    //color: $color-white;
     margin: 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sectionPrice {
+    padding: 60px 0px 60px;
+  }
+  .priceHeading {
+    position: relative;
+    z-index: 2;
+    @include font($fontRoboto, bold, $color-white);
+    font-size: 48px;
+    text-align: left;
+    text-transform: uppercase;
+
+    margin: 0px 0px 60px;
+
+    &-text {
+      width: 350px;
+      @include font($fontRoboto, normal, $color-white);
+      font-size: 15px;
+      line-height: 18px;
+      margin: 0px 0px 35px;
+    }
+  }
+  .priceHeading-underline {
+    position: relative;
+    z-index: 1;
+    top: -74px;
+    left: 15px;
+    width: 132px;
+    height: 6px;
+    background-color: $color-yellow;
+  }
+  .artPrice {
+    display: block;
+    margin-bottom: 32px;
+  }
+  .priceList {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 114px;
+
+    &-items {
+      width: 217px;
+      list-style: none;
+    }
+  }
+  .artPainting {
+    @include font($fontRoboto, bold, $color-white);
+    font-size: 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+  .img {
+    margin-bottom: 23px;
+  }
+  .paintingPrice {
+    @include font($fontRoboto, normal, $color-white);
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  .painting-price {
+    @include font($fontAvangard, normal, $color-yellow);
+    font-size: 36px;
+  }
+  .painting-square {
+    @include font($fontRoboto, normal, $color-yellow);
+    font-size: 15px;
+  }
+  .artAbout {
+    @include font($fontRoboto, normal, $color-white);
+    font-size: 15px;
+    margin-top: 25px;
+    margin-bottom: 0px;
   }
 }

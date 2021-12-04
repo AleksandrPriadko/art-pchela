@@ -126,43 +126,112 @@
         </p>
         <ul class="priceList">
           <li class="priceList-items">
-            <div>
-              <img class="artPrice" src="./images/art-graphity.jpg" alt="" />
-              <div class="blokPrice">
-                <h3 class="artPainting">Фон, надписи</h3>
-                <h4 class="paintingPrice">
-                  от <span>800</span> <span>₴/м2</span>
-                </h4>
-                <p class="artAbout">Роспись небо, облака, граффити, надписи</p>
-              </div>
+            <picture>
+              <source
+                srcset="./images/price/background-315.jpg"
+                media="(max-width: 767px)"
+              />
+              <source
+                srcset="
+                  ./images/price/background-312@1.png  1x,
+                  ./images/price/background-312@2x.png 2x
+                "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  ./images/price/background-216@1.png 1x,
+                  ./images/price/background-216@2.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <img
+                class="artPrice"
+                src="./images/price/background-315.jpg"
+                alt="price background"
+              />
+            </picture>
+            <!-- <img class="artPrice" src="./images/art-graphity.jpg" alt="" /> -->
+            <div class="blokPrice">
+              <h3 class="artPainting">Фон, надписи</h3>
+              <span class="paintingPrice">от</span>
+              <span class="painting-price">800</span>
+              <span class="painting-square">₴/м2</span>
+              <p class="artAbout">Роспись небо, облака, граффити, надписи</p>
             </div>
           </li>
           <li class="priceList-items">
-            <div>
-              <img class="artPrice" src="./images/art-viking.jpg" alt="" />
-              <div class="blokPrice">
-                <h3 class="artPainting">Пейзажи</h3>
-                <h4 class="paintingPrice">
-                  от <span>1200</span> <span>₴/м2</span>
-                </h4>
-                <p class="artAbout">
-                  Пейзаж, панорама, изображение архитектуры, детализация
-                </p>
-              </div>
+            <picture>
+              <source
+                srcset="./images/price/landscape-315.jpg"
+                media="(max-width: 767px)"
+              />
+              <source
+                srcset="
+                  ./images/price/landscape-312@1.png  1x,
+                  ./images/price/landscape-312@2x.png 2x
+                "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  ./images/price/landscape-216@1.png  1x,
+                  ./images/price/landscape-216@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <img
+                class="artPrice"
+                src="./images/price/landscape-315.jpg"
+                alt="price landscape"
+              />
+            </picture>
+            <!-- <img class="artPrice" src="./images/art-viking.jpg" alt="" /> -->
+            <div class="blokPrice">
+              <h3 class="artPainting">Пейзажи</h3>
+              <span class="paintingPrice">от</span>
+              <span class="painting-price">1200</span>
+              <span class="painting-square">₴/м2</span>
+              <p class="artAbout">
+                Пейзаж, панорама, изображение архитектуры, детализация
+              </p>
             </div>
           </li>
           <li class="priceList-items">
-            <div>
-              <img class="artPrice" src="./images/art-girl.jpg" alt="" />
-              <div class="blokPrice">
-                <h3 class="artPainting">Изображения людей</h3>
-                <h4 class="paintingPrice">
-                  от <span>1800</span> <span>₴/м2</span>
-                </h4>
-                <p class="artAbout">
-                  Детализированная роспись, композиция с фигурами людей
-                </p>
-              </div>
+            <picture>
+              <source
+                srcset="./images/price/imgPeople-315.jpg"
+                media="(max-width: 767px)"
+              />
+              <source
+                srcset="
+                  ./images/price/imgPeople-312@1.png  1x,
+                  ./images/price/imgPeople-312@2x.png 2x
+                "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  ./images/price/imgPeople-217@1.png 1x,
+                  ./images/price/imgPeople-217@2.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <img
+                class="artPrice"
+                src="./images/price/imgPeople-315.jpg"
+                alt="price background"
+              />
+            </picture>
+            <!-- <img class="artPrice" src="./images/art-girl.jpg" alt="" /> -->
+            <div class="blokPrice">
+              <h3 class="artPainting img">Изображения людей</h3>
+              <span class="paintingPrice">от</span>
+              <span class="painting-price">1800</span>
+              <span class="painting-square">₴/м2</span>
+              <p class="artAbout">
+                Детализированная роспись, композиция с фигурами людей
+              </p>
             </div>
           </li>
         </ul>

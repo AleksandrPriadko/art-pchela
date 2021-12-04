@@ -28,3 +28,31 @@
     height: 4px;
   }
 }
+@media screen and (min-width: 768px) {
+  .sectionPortfolio {
+    padding: 60px 0px 60px;
+  }
+  .portfolioHeading {
+    position: relative;
+    z-index: 2;
+    @include font($fontRoboto, bold, $color-white);
+    // font-family: $fontRoboto;
+    // font-style: normal;
+    // font-weight: bold;
+    font-size: 48px;
+    text-align: left;
+    text-transform: uppercase;
+
+    //color: $color-white;
+    margin: 0px;
+  }
+  .portfolioHeading-underline {
+    position: relative;
+    z-index: 1;
+    top: -13px;
+    left: 17px;
+    background-color: $color-yellow;
+    width: 296px;
+    height: 6px;
+  }
+}
