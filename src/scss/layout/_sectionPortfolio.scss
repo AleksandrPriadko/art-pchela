@@ -1,12 +1,12 @@
 .sectionPortfolio {
-  position: relative;
+  //position: relative;
   background-color: $color-black;
   padding: 75px 0px 124px;
 }
 @media screen and (max-width: 767px) {
   .portfolioHeading {
     position: relative;
-    z-index: 999;
+    z-index: 2;
     @include font($fontRoboto, bold, $color-white);
     // font-family: $fontRoboto;
     // font-style: normal;
@@ -18,11 +18,11 @@
     //color: $color-white;
     margin: 0px;
   }
-  .line {
-    position: absolute;
-    z-index: 950;
-    top: 101px;
-    left: 105px;
+  .portfolioHeading-underline {
+    position: relative;
+    z-index: 1;
+    top: -8px;
+    left: 75px;
     background-color: $color-yellow;
     width: 184px;
     height: 4px;
