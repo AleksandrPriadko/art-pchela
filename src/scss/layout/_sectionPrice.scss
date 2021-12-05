@@ -49,22 +49,31 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0px 0px 20px;
   }
+  .artPainting_price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0px 0px 20px;
+  }
   .paintingPrice {
     @include font($fontRoboto, normal, $color-white);
     font-size: 15px;
     text-align: center;
-    margin: 0px 0px 20px;
-
-    & > span:nth-child(1) {
-      @include font($fontAvangard, normal, $color-yellow);
-      font-size: 36px;
-    }
-
-    & > span:nth-child(2) {
-      @include font($fontRoboto, normal, $color-yellow);
-      font-size: 15px;
-    }
   }
+  .painting-price {
+    @include font($fontAvangard, normal, $color-yellow);
+    font-size: 36px;
+    text-align: center;
+    line-height: 80%;
+    padding: 0px 5px;
+  }
+
+  .painting-square {
+    @include font($fontRoboto, normal, $color-yellow);
+    font-size: 15px;
+    text-align: center;
+  }
+
   .artAbout {
     @include font($fontRoboto, normal, $color-white);
     font-size: 15px;

@@ -42,15 +42,6 @@
     </header>
     <section class="sectionCalc">
       <div class="container hero-img">
-        <picture>
-          <source srcset="./images/girls-375.png" media="(max-width: 767px)" />
-          <source
-            srcset="./images/girls-517@1x.png 1x, ./images/girls-517@2x.png 2x"
-            media="(min-width: 1440px)"
-          />
-          <source srcset="./images/girls-768.png" media="(min-width: 768px)" />
-          <img src="./images/girls-375.png" alt="art girl" class="img-girls" />
-        </picture>
         <!-- <img src="./images/girls-375.png" alt="art girl" class="img-girls" /> -->
         <div class="blockCalc">
           <h1 class="text-iwp">interior wall painting</h1>
@@ -61,6 +52,15 @@
             <a href="#" class="btn-calc">просчитать роспись</a>
           </div>
         </div>
+        <picture>
+          <source srcset="./images/girls-375.png" media="(max-width: 767px)" />
+          <source
+            srcset="./images/girls-517@1x.png 1x, ./images/girls-517@2x.png 2x"
+            media="(min-width: 1440px)"
+          />
+          <source srcset="./images/girls-768.png" media="(min-width: 768px)" />
+          <img src="./images/girls-375.png" alt="art girl" class="img-girls" />
+        </picture>
       </div>
     </section>
     <section class="sectionAbout">
@@ -154,9 +154,12 @@
             <!-- <img class="artPrice" src="./images/art-graphity.jpg" alt="" /> -->
             <div class="blokPrice">
               <h3 class="artPainting">Фон, надписи</h3>
-              <span class="paintingPrice">от</span>
-              <span class="painting-price">800</span>
-              <span class="painting-square">₴/м2</span>
+              <div class="artPainting_price">
+                <span class="paintingPrice">от</span>
+                <span class="painting-price">800</span>
+                <span class="painting-square">₴/м2</span>
+              </div>
+
               <p class="artAbout">Роспись небо, облака, граффити, надписи</p>
             </div>
           </li>
@@ -189,9 +192,12 @@
             <!-- <img class="artPrice" src="./images/art-viking.jpg" alt="" /> -->
             <div class="blokPrice">
               <h3 class="artPainting">Пейзажи</h3>
-              <span class="paintingPrice">от</span>
-              <span class="painting-price">1200</span>
-              <span class="painting-square">₴/м2</span>
+              <div class="artPainting_price">
+                <span class="paintingPrice">от</span>
+                <span class="painting-price">1200</span>
+                <span class="painting-square">₴/м2</span>
+              </div>
+
               <p class="artAbout">
                 Пейзаж, панорама, изображение архитектуры, детализация
               </p>
@@ -226,9 +232,12 @@
             <!-- <img class="artPrice" src="./images/art-girl.jpg" alt="" /> -->
             <div class="blokPrice">
               <h3 class="artPainting img">Изображения людей</h3>
-              <span class="paintingPrice">от</span>
-              <span class="painting-price">1800</span>
-              <span class="painting-square">₴/м2</span>
+              <div class="artPainting_price">
+                <span class="paintingPrice">от</span>
+                <span class="painting-price">1800</span>
+                <span class="painting-square">₴/м2</span>
+              </div>
+
               <p class="artAbout">
                 Детализированная роспись, композиция с фигурами людей
               </p>
@@ -296,26 +305,87 @@
           <div class="clients-lines"></div>
           <ul class="clients-list">
             <li class="companyLogo">
-              <img src="./images/molokootfermera-grey.png" alt="" />
+              <picture>
+                <source
+                  srcset="./images/clients/molokootfermera-grey_mobile.png"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/clients/sinergia-grey_tablet.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/clients/molokootfermera-grey_mobile.png"
+                  alt=""
+                />
+              </picture>
+              <!-- <img src="./images/molokootfermera-grey.png" alt="" /> -->
             </li>
             <li class="companyLogo">
-              <img src="./images/parkovemisto-grey.png" alt="" />
+              <picture>
+                <source
+                  srcset="./images/clients/parkovemisto-grey_mobile.png"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/clients/eldorado-grey_tablet.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/clients/parkovemisto-grey_mobile.png"
+                  alt=""
+                />
+              </picture>
+              <!-- <img src="./images/parkovemisto-grey.png" alt="" /> -->
             </li>
             <li class="companyLogo">
-              <img src="./images/yunost-grey.png" alt="" />
+              <picture>
+                <source
+                  srcset="./images/clients/yunost-grey_mobile.png"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/clients/parkovemisto-grey_tablet.png"
+                  media="(min-width: 768px)"
+                />
+                <img src="./images/clients/yunost-grey_mobile.png" alt="" />
+              </picture>
+              <!-- <img src="./images/yunost-grey.png" alt="" /> -->
             </li>
             <li class="companyLogo">
-              <img src="./images/eldorado-grey.png" alt="" />
+              <picture>
+                <source
+                  srcset="./images/clients/eldorado-grey_mobile.png"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/clients/yunost-grey_tablet.png"
+                  media="(min-width: 768px)"
+                />
+                <img src="./images/clients/eldorado-grey_mobile.png" alt="" />
+              </picture>
+              <!-- <img src="./images/eldorado-grey.png" alt="" /> -->
             </li>
             <li class="companyLogo">
-              <img src="./images/sinergia-grey.png" alt="" />
+              <picture>
+                <source
+                  srcset="./images/clients/sinergia-grey_mobile.png"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/clients/molokootfermera-grey_tablet.png"
+                  media="(min-width: 768px)"
+                />
+                <img src="./images/clients/sinergia-grey_mobile.png" alt="" />
+              </picture>
+              <!-- <img src="./images/sinergia-grey.png" alt="" /> -->
             </li>
           </ul>
         </div>
       </div>
     </section>
     <footer class="footer">
-      <div class="container">
+      <div class="container footer__block">
         <h1 class="heading-kit">keep in touch</h1>
         <div class="blocSocials">
           <div class="blockContaсts" id="contacts">

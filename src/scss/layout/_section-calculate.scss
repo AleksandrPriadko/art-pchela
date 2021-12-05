@@ -12,19 +12,26 @@
     // //background-size: contain;
     // background-repeat: no-repeat;
 
-    padding: 15px 0px 336px;
+    padding: 15px 0px 342px;
   }
 }
 .hero-img {
   position: relative;
+  z-index: 3;
 }
 .img-girls {
-  display: block;
-  position: absolute;
-  top: 185px;
-  left: 0px;
+  @media screen and (max-width: 767px) {
+    display: block;
+    position: absolute;
+    top: 185px;
+    left: 0px;
+  }
   @media screen and (min-width: 768px) {
+    //display: block;
+    position: absolute;
+    z-index: 1;
     top: 208px;
+    left: 0px;
     //bottom: 0px;
   }
 }
@@ -40,6 +47,7 @@
   }
   @media screen and (min-width: 768px) {
     position: relative;
+    z-index: 2;
   }
 }
 .text-iwp {

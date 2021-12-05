@@ -36,24 +36,42 @@
     margin: 0px 0px 60px;
   }
 }
-
-.paintingCalc-line {
-  position: absolute;
-  z-index: 2;
-  top: 42px;
-  left: 16px;
-  background-color: $color-yellow;
-  width: 310px;
-  height: 6px;
-}
+.paintingCalc-line,
 .paintingCalc-lines {
   position: absolute;
   z-index: 2;
-  top: 99px;
-  left: 16px;
   background-color: $color-yellow;
-  width: 221px;
-  height: 6px;
+}
+
+.paintingCalc-line {
+  @media screen and (max-width: 767px) {
+    top: 26px;
+    left: 71px;
+    width: 194px;
+    height: 4px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 42px;
+    left: 16px;
+    width: 310px;
+    height: 6px;
+  }
+}
+.paintingCalc-lines {
+  @media screen and (max-width: 767px) {
+    top: 62px;
+    left: 102px;
+    width: 137px;
+    height: 4px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 99px;
+    left: 16px;
+    width: 221px;
+    height: 6px;
+  }
 }
 
 .paintingCalc-text {

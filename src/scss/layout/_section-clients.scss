@@ -2,7 +2,7 @@
   background-color: $color-black;
   padding-bottom: 75px;
   @media screen and (min-width: 768px) {
-    padding: 60px 0px 60px;
+    padding: 60px 0px 130px;
   }
 }
 
@@ -32,15 +32,28 @@
   }
 }
 .clients-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0px;
-  padding: 0px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+  }
 }
-.companyLogo:nth-last-child(-n + 2) {
-  margin-top: 16px;
+@media screen and (max-width: 767px) {
+  .companyLogo:nth-last-child(-n + 2) {
+    margin-top: 16px;
+  }
 }
 .clients-line {
   @media screen and (max-width: 767px) {

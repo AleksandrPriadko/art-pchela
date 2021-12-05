@@ -2,7 +2,7 @@
   background-color: $color-black;
   @media screen and (max-width: 767px) {
     //position: relative;
-    padding: 86px 0px 125px;
+    padding: 86px 0px 83px;
   }
   @media screen and (min-width: 768px) {
     //position: relative;
@@ -237,50 +237,48 @@
 .amountPain {
   @media screen and (max-width: 767px) {
     display: block;
-    width: 222px;
+    width: 143px;
     position: absolute;
-    top: 152px;
+    top: 133px;
     right: 0px;
     border-right-width: 1px;
     border-right-style: solid;
     border-right-color: $color-yellow;
-    padding: 127px 0px 74px;
+    padding: 98px 0px 74px;
 
     & > div {
       position: absolute;
-      top: 219px;
+      top: 200px;
       right: 14px;
-      width: 90px;
+      width: 80px;
       height: 5px;
 
       background-color: $color-yellow;
     }
-
+    &-more {
+      display: block;
+      @include font($fontRoboto, normal, $color-white);
+      font-size: 15px;
+      padding-left: 34px;
+    }
     &-number {
-      position: relative;
-      right: 0px;
+      display: block;
+      // position: relative;
       @include font($fontAvangardGITC, normal, $color-yellow);
       font-size: 76px;
-      text-transform: uppercase;
-      padding-left: 16px;
+      text-align: left;
+      letter-spacing: -10px;
+      padding-left: 25px;
       margin: 0px;
-      margin-bottom: 6px;
-
-      &::before {
-        content: 'более';
-        display: block;
-        @include font($fontRoboto, normal, $color-white);
-        font-size: 15px;
-        text-transform: lowercase;
-        padding-left: 8px;
-      }
+      margin-bottom: 12px;
     }
     &-text {
+      display: block;
       width: 143px;
       @include font($fontRoboto, bold, $color-white);
       font-size: 17px;
       text-transform: uppercase;
-      padding-left: 5px;
+      //padding-left: 5px;
       margin: 0px;
     }
   }
@@ -305,7 +303,6 @@
       background-color: $color-yellow;
     }
     &-more {
-      content: 'более';
       display: block;
       position: relative;
       //left: 20px;
