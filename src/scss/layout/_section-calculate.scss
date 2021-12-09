@@ -1,18 +1,11 @@
 .sectionCalc {
   background-color: $color-yellow;
-  // @media screen and (max-width: 767px) {
-  //   background-image: url('./images/girls-375.png');
-  //   background-position: left 0px top 220px;
-  //   background-size: contain;
-  //   background-repeat: no-repeat;
-  // }
-  @media screen and (min-width: 768px) {
-    // background-image: url('./images/girls-768.png');
-    // background-position: left 0px top 216px;
-    // //background-size: contain;
-    // background-repeat: no-repeat;
 
+  @media screen and (min-width: 768px) {
     padding: 15px 0px 342px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 0px;
   }
 }
 .hero-img {
@@ -49,6 +42,11 @@
     position: relative;
     z-index: 2;
   }
+  @media screen and (min-width: 1440px) {
+    position: relative;
+    z-index: 2;
+    height: 800px;
+  }
 }
 .text-iwp {
   @media screen and (max-width: 767px) {
@@ -68,6 +66,13 @@
     text-transform: uppercase;
 
     margin: 0px 0px 40px;
+  }
+  @media screen and (min-width: 1440px) {
+    @include font($fontAvangardGITC, normal, $color-black);
+    font-size: 288px;
+    line-height: 250px;
+
+    text-transform: uppercase;
   }
 }
 
