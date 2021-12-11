@@ -8,6 +8,9 @@
     //position: relative;
     padding: 130px 0px 105px;
   }
+  @media screen and (min-width: 1440px) {
+    padding: 150px 0px 75px;
+  }
 }
 .blockAbout {
   display: block;
@@ -19,28 +22,29 @@
 .about-heading {
   position: relative;
   z-index: 3;
+  @include font($fontRoboto, bold, $color-white);
+  text-transform: uppercase;
   @media screen and (max-width: 767px) {
-    @include font($fontRoboto, bold, $color-white);
     font-size: 30px;
     line-height: 35px;
     text-align: center;
-    text-transform: uppercase;
     margin: 0px 0px 43px;
   }
   @media screen and (min-width: 768px) {
-    @include font($fontRoboto, bold, $color-white);
     font-size: 48px;
     line-height: 56px;
-    text-transform: uppercase;
     margin: 0px 0px 60px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 64px;
+    line-height: 75px;
+    margin: 0px 0px 50px;
   }
 }
 .about-heading__underline {
   position: absolute;
   z-index: 1;
   @media screen and (max-width: 767px) {
-    // position: absolute;
-    // z-index: 1;
     top: 26px;
     left: 123px;
     background-color: $color-yellow;
@@ -48,13 +52,18 @@
     width: 87px;
   }
   @media screen and (min-width: 768px) {
-    // position: absolute;
-    // z-index: 1;
     top: 43px;
     left: 13px;
     background-color: $color-yellow;
     height: 6px;
     width: 144px;
+  }
+  @media screen and (min-width: 1440px) {
+    top: 56px;
+    left: 25px;
+    background-color: $color-yellow;
+    height: 8px;
+    width: 182px;
   }
 }
 

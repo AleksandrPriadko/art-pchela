@@ -27,6 +27,12 @@
     left: 0px;
     //bottom: 0px;
   }
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 640px;
+  }
 }
 .blockCalc {
   @media screen and (max-width: 767px) {
@@ -68,8 +74,9 @@
     margin: 0px 0px 40px;
   }
   @media screen and (min-width: 1440px) {
+    margin-left: 45px;
     @include font($fontAvangardGITC, normal, $color-black);
-    font-size: 288px;
+    font-size: 280px;
     line-height: 250px;
 
     text-transform: uppercase;
@@ -88,21 +95,30 @@
     top: 175px;
     left: 391px;
   }
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    top: 395px;
+    left: 1035px;
+  }
   & span {
+    display: block;
+    @include font($fontAvangard, normal, $color-black);
     @media screen and (max-width: 767px) {
-      display: block;
       width: 160px;
-      @include font($fontAvangard, normal, $color-black);
       font-size: 24px;
       line-height: 29px;
       text-transform: lowercase;
     }
     @media screen and (min-width: 768px) {
-      display: block;
       width: 160px;
-      @include font($fontAvangard, normal, $color-black);
       font-size: 24px;
       line-height: 29px;
+      text-transform: lowercase;
+    }
+    @media screen and (min-width: 1440px) {
+      width: 240px;
+      font-size: 36px;
+      line-height: 43px;
       text-transform: lowercase;
     }
   }
@@ -115,13 +131,20 @@
     display: flex;
     justify-content: flex-end;
   }
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    display: flex;
+    top: 270px;
+    left: 1113px;
+    //justify-content: flex-end;
+  }
 }
 .btn-calc {
+  display: block;
+  @include font($fontAvangard, normal, $color-white);
+  background-color: $color-black;
+  border: 1px solid $color-black;
   @media screen and (max-width: 767px) {
-    display: block;
-    background-color: $color-black;
-    border: 1px solid $color-black;
-    @include font($fontAvangard, normal, $color-white);
     font-size: 14px;
     line-height: 17px;
     text-align: center;
@@ -131,15 +154,22 @@
     padding: 22px 30px;
   }
   @media screen and (min-width: 768px) {
-    display: block;
     width: 224px;
-    background-color: $color-black;
-    @include font($fontAvangard, normal, $color-white);
     font-size: 14px;
     line-height: 17px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     padding: 24px 30px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 247px;
+
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 30px 20px 28px;
   }
 }
