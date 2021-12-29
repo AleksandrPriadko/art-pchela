@@ -4,3 +4,13 @@
   font-weight: $font-weight;
   color: $color;
 }
+@mixin borderLeft {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: $color-yellow;
+}
+@mixin borderRight {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: $color-yellow;
+}
