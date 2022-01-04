@@ -7,28 +7,98 @@
 }
 
 .clients-heading {
+  position: relative;
+  z-index: 3;
+
+  margin: 0px 0px 50px;
+
+  @include font($fontRoboto, bold, $color-white);
+  text-transform: uppercase;
+
   @media screen and (max-width: 767px) {
-    position: relative;
-    z-index: 3;
-    @include font($fontRoboto, bold, $color-white);
+    padding: 0px 86px 0px;
+
     font-size: 30px;
     line-height: 35px;
     text-align: center;
-    text-transform: uppercase;
-    padding: 0px 86px 0px;
-    margin: 0px 0px 50px;
   }
+
   @media screen and (min-width: 768px) {
     width: 240px;
-    position: relative;
-    z-index: 3;
-    @include font($fontRoboto, bold, $color-white);
+
     font-size: 48px;
     line-height: 56px;
     text-align: left;
-    text-transform: uppercase;
+  }
 
-    margin: 0px 0px 50px;
+  @media screen and (min-width: 1440px) {
+    width: 310px;
+
+    margin: 0px 0px 86px;
+
+    font-size: 64px;
+    line-height: 75px;
+  }
+}
+.clients-line {
+  position: absolute;
+  z-index: 2;
+
+  background-color: $color-yellow;
+
+  @media screen and (max-width: 767px) {
+    top: 26px;
+    left: 122px;
+
+    width: 93px;
+    height: 4px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 42px;
+    left: 16px;
+
+    width: 142px;
+    height: 6px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 56px;
+    left: 22px;
+
+    width: 182px;
+    height: 8px;
+  }
+}
+
+.clients-lines {
+  position: absolute;
+  z-index: 2;
+
+  background-color: $color-yellow;
+
+  @media screen and (max-width: 767px) {
+    top: 62px;
+    left: 96px;
+
+    width: 143px;
+    height: 4px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 99px;
+    left: 16px;
+
+    width: 221px;
+    height: 6px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    top: 131px;
+    left: 22px;
+
+    width: 302px;
+    height: 8px;
   }
 }
 .clients-list {
@@ -53,45 +123,5 @@
 @media screen and (max-width: 767px) {
   .companyLogo:nth-last-child(-n + 2) {
     margin-top: 16px;
-  }
-}
-.clients-line {
-  @media screen and (max-width: 767px) {
-    position: absolute;
-    z-index: 2;
-    top: 26px;
-    left: 122px;
-    background-color: $color-yellow;
-    width: 93px;
-    height: 4px;
-  }
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    z-index: 2;
-    top: 42px;
-    left: 16px;
-    background-color: $color-yellow;
-    width: 142px;
-    height: 6px;
-  }
-}
-.clients-lines {
-  @media screen and (max-width: 767px) {
-    position: absolute;
-    z-index: 2;
-    top: 62px;
-    left: 96px;
-    background-color: $color-yellow;
-    width: 143px;
-    height: 4px;
-  }
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    z-index: 2;
-    top: 99px;
-    left: 16px;
-    background-color: $color-yellow;
-    width: 221px;
-    height: 6px;
   }
 }
