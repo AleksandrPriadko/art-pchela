@@ -1,1 +1,10 @@
-
+.underline {
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    top: 548px;
+    right: 0;
+    width: 1037px;
+    height: 1px;
+    background-color: $color-yellow;
+  }
+}
