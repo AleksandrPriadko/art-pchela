@@ -167,5 +167,12 @@
     line-height: 22px;
     text-align: left;
     padding: 20px 30px 20px 28px;
+
+    &:hover {
+      font-size: 20px;
+      color: $color-yellow;
+
+      transition: color 1050ms ease, font-size 450ms ease;
+    }
   }
 }
