@@ -145,9 +145,14 @@
 .data-input {
   height: 58px;
   @include borderInput($color-black, $color-yellow);
+  font-size: 20px;
+  color: $color-white;
+  padding: 0px 10px;
 
   @media screen and (min-width: 768px) {
     width: 566px;
+
+    padding: 0px 20px;
   }
   @media screen and (min-width: 1440px) {
     width: 640px;

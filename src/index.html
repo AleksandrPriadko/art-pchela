@@ -13,8 +13,8 @@
   </head>
 
   <body>
-    <header class="header sectionCalc">
-      <div class="container hero-img size-desk">
+    <header class="header">
+      <div class="container desktop">
         <div class="blockHeader">
           <div class="blokMenu">
             <a href="#" class="iconMenu">
@@ -46,96 +46,43 @@
             </ul>
           </nav>
         </div>
-        <div class="blockCalc">
-          <h1 class="text-iwp">interior wall painting</h1>
-          <div class="text-painter-wall">
-            <p><span>Интерьерная роспись стен</span></p>
-          </div>
-          <div class="block-btn-calc">
-            <a href="#" class="btn-calc">просчитать роспись</a>
-          </div>
-          <picture>
-            <source
-              srcset="./images/girls-375.png"
-              media="(max-width: 767px)"
-            />
-            <source
-              srcset="
-                ./images/girls-517@1x.png 1x,
-                ./images/girls-517@2x.png 2x
-              "
-              media="(min-width: 1440px)"
-            />
-            <source
-              srcset="./images/girls-768.png"
-              media="(min-width: 768px)"
-            />
-            <img
-              src="./images/girls-375.png"
-              alt="art girl"
-              class="img-girls"
-            />
-          </picture>
-        </div>
       </div>
-      <!-- <div class="sectionCalc">
-        <div class="container hero-img">
-          <div class="blockCalc">
-            <h1 class="text-iwp">interior wall painting</h1>
-            <div class="text-painter-wall">
-              <p><span>Интерьерная роспись стен</span></p>
-            </div>
-            <div class="block-btn-calc">
-              <a href="#" class="btn-calc">просчитать роспись</a>
-            </div>
-          </div>
-          <picture>
-            <source
-              srcset="./images/girls-375.png"
-              media="(max-width: 767px)"
-            />
-            <source
-              srcset="
-                ./images/girls-517@1x.png 1x,
-                ./images/girls-517@2x.png 2x
-              "
-              media="(min-width: 1440px)"
-            />
-            <source
-              srcset="./images/girls-768.png"
-              media="(min-width: 768px)"
-            />
-            <img
-              src="./images/girls-375.png"
-              alt="art girl"
-              class="img-girls"
-            />
-          </picture>
-        </div>
-      </div> -->
     </header>
-    <!-- <section class="sectionCalc">
-      <div class="container hero-img">
+    <section class="sectionCalc">
+      <div class="container hero-img size-desk">
         <div class="blockCalc">
           <h1 class="text-iwp">interior wall painting</h1>
           <div class="text-painter-wall">
             <p><span>Интерьерная роспись стен</span></p>
           </div>
           <div class="block-btn-calc">
-            <a href="#" class="btn-calc">просчитать роспись</a>
+            <a href="#paintingCalc" class="btn-calc">просчитать роспись</a>
           </div>
+          <picture>
+            <source
+              srcset="./images/girls-375.png"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="
+                ./images/girls-517@1x.png 1x,
+                ./images/girls-517@2x.png 2x
+              "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="./images/girls-768.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./images/girls-375.png"
+              alt="art girl"
+              class="img-girls"
+            />
+          </picture>
         </div>
-        <picture>
-          <source srcset="./images/girls-375.png" media="(max-width: 767px)" />
-          <source
-            srcset="./images/girls-517@1x.png 1x, ./images/girls-517@2x.png 2x"
-            media="(min-width: 1440px)"
-          />
-          <source srcset="./images/girls-768.png" media="(min-width: 768px)" />
-          <img src="./images/girls-375.png" alt="art girl" class="img-girls" />
-        </picture>
       </div>
-    </section> -->
+    </section>
     <section class="sectionAbout">
       <div class="container">
         <div class="blockAbout">
@@ -334,7 +281,9 @@
       <div class="container">
         <div class="background bkdPaintiing">
           <div class="paintingCalcBox">
-            <h2 class="paintingCalc-heading">просчитать роспись</h2>
+            <h2 class="paintingCalc-heading" id="paintingCalc">
+              просчитать роспись
+            </h2>
             <div class="paintingCalc-line"></div>
             <div class="paintingCalc-lines"></div>
             <p class="paintingCalc-text">
@@ -352,6 +301,9 @@
                 name="username"
                 placeholder="Александр"
                 id="user_name"
+                minlength="2"
+                maxlength="26"
+                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
                 required
               />
             </label>
