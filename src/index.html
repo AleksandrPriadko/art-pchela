@@ -17,7 +17,7 @@
       <div class="container desktop">
         <div class="blockHeader">
           <div class="blokMenu">
-            <button type="button" class="iconMenu">
+            <button type="button" class="iconMenu" data-action="open-modal">
               <svg class="svg-menu">
                 <use href="./images/sprite-icons.svg#menu-1"></use>
               </svg>
@@ -29,7 +29,27 @@
               </svg>
             </a>
           </div>
-          <nav class="nav">
+          <div class="backdrop js-backdrop">
+            <div class="modal">
+              <nav class="nav">
+                <ul class="navList">
+                  <li class="navItem">
+                    <a href="#about" class="navLink about">О нас</a>
+                  </li>
+                  <li class="navItem">
+                    <a href="#price" class="navLink portfolio">Портфолио</a>
+                  </li>
+                  <li class="navItem">
+                    <a href="#price" class="navLink price">Цены</a>
+                  </li>
+                  <li class="navItem">
+                    <a href="#contacts" class="navLink contacts">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- <nav class="nav">
             <ul class="navList">
               <li class="navItem">
                 <a href="#about" class="navLink about">О нас</a>
@@ -44,7 +64,7 @@
                 <a href="#contacts" class="navLink contacts">Контакты</a>
               </li>
             </ul>
-          </nav>
+          </nav> -->
         </div>
       </div>
     </header>
