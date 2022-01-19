@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Starter Kit</title>
+    <title>Art Pchela Интерьерная роспись стен</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -17,10 +17,18 @@
       <div class="container desktop">
         <div class="blockHeader">
           <div class="blokMenu">
-            <button type="button" class="iconMenu" data-action="open-modal">
+            <!-- <button type="button" class="iconMenu" data-action="open-modal">
               <svg class="svg-menu">
                 <use href="./images/sprite-icons.svg#menu-1"></use>
               </svg>
+            </button> -->
+            <button
+              type="button"
+              class="btn-menu btn-menu-anim js-btn-menu"
+              data-action="open-modal"
+              data-menu="close-modal"
+            >
+              <div class="line-menu"></div>
             </button>
             <img class="logoArt" src="./images/artpchela_logo.svg" alt="" />
             <a href="#contacts" class="iconMenu">
@@ -29,27 +37,7 @@
               </svg>
             </a>
           </div>
-          <div class="backdrop js-backdrop">
-            <div class="modal">
-              <nav class="nav">
-                <ul class="navList">
-                  <li class="navItem">
-                    <a href="#about" class="navLink about">О нас</a>
-                  </li>
-                  <li class="navItem">
-                    <a href="#price" class="navLink portfolio">Портфолио</a>
-                  </li>
-                  <li class="navItem">
-                    <a href="#price" class="navLink price">Цены</a>
-                  </li>
-                  <li class="navItem">
-                    <a href="#contacts" class="navLink contacts">Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <!-- <nav class="nav">
+          <nav class="nav">
             <ul class="navList">
               <li class="navItem">
                 <a href="#about" class="navLink about">О нас</a>
@@ -64,7 +52,7 @@
                 <a href="#contacts" class="navLink contacts">Контакты</a>
               </li>
             </ul>
-          </nav> -->
+          </nav>
         </div>
       </div>
     </header>
@@ -501,4 +489,25 @@
       </div>
     </footer>
   </body>
+  <!--Modal menu mobile view-->
+  <div class="backdrop js-backdrop">
+    <div class="modal">
+      <nav class="nav-menu">
+        <ul class="nav__List">
+          <li class="nav__Item">
+            <a href="#about" class="nav__Link about">О нас</a>
+          </li>
+          <li class="nav__Item">
+            <a href="#price" class="nav__Link portfolio">Портфолио</a>
+          </li>
+          <li class="nav__Item">
+            <a href="#price" class="nav__Link price">Цены</a>
+          </li>
+          <li class="nav__Item">
+            <a href="#contacts" class="nav__Link contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </html>

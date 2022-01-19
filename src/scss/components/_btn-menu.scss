@@ -1,0 +1,138 @@
+.btn-menu {
+  position: relative;
+  z-index: 999;
+  //font-size: 1;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  padding: 0;
+  border: none; ///////////////// touch area size
+  background-color: $color-white;
+}
+.line-menu {
+  //margin-bottom: 14px;
+  width: 40px;
+  height: 4px;
+  border-radius: 1em;
+  background: $color-black;
+  &::before,
+  &::after {
+    //transition: font-size 0s;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: $color-black;
+    border-radius: 1em;
+  }
+  &::before {
+    margin-top: -14px;
+  }
+  &::after {
+    margin-top: 14px;
+  }
+}
+.btn-menu-anim {
+  & > .line-menu {
+    transition: background 0.4s;
+    &::before,
+    &::after {
+      //transition: font-size 0s;
+      transform-origin: center center;
+    }
+  }
+  &.toggled {
+    & > .line-menu::before {
+      animation: burg2top 0.4s linear forwards;
+    }
+    & > .line-menu {
+      background: transparent;
+    }
+    & > .line-menu::after {
+      animation: burg2bottom 0.4s linear forwards;
+    }
+  }
+  &.unToggled {
+    & > .line-menu::before {
+      animation: burg2topReset 0.4s linear forwards;
+    }
+    & > .line-menu {
+      background: $color-black;
+    }
+    & > .line-menu::after {
+      animation: burg2bottomReset 0.4s linear forwards;
+    }
+  }
+
+  @keyframes burg2top {
+    0% {
+    }
+    20% {
+      margin-top: 0em;
+      transform: rotate(0deg);
+    }
+    60% {
+      margin-top: 0em;
+      transform: rotate(55deg);
+    }
+    100% {
+      margin-top: 0em;
+      transform: rotate(45deg);
+    }
+  }
+
+  @keyframes burg2bottom {
+    0% {
+    }
+    20% {
+      margin-top: 0em;
+      transform: rotate(0deg);
+    }
+    60% {
+      margin-top: 0em;
+      transform: rotate(-55deg);
+    }
+    100% {
+      margin-top: 0em;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes burg2topReset {
+    0% {
+      margin-top: 0em;
+      transform: rotate(45deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+    60% {
+      margin-top: 16px;
+      transform: rotate(0deg);
+    }
+    100% {
+      margin-top: 14px;
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes burg2bottomReset {
+    0% {
+      margin-top: 0em;
+      transform: rotate(-45deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+    60% {
+      margin-top: -16px;
+      transform: rotate(0deg);
+    }
+    100% {
+      margin-top: -14px;
+      transform: rotate(0deg);
+    }
+  }
+}
