@@ -63,10 +63,10 @@
     font-size: 17px;
   }
 }
-// @media screen and (min-width: 768px) {
-//   .backdrop {
-//     display: none;
-//     // justify-content: center;
-//     // align-items: center;
-//   }
-// }
+@media screen and (min-width: 768px) {
+  .backdrop {
+    display: none;
+    // justify-content: center;
+    // align-items: center;
+  }
+}
