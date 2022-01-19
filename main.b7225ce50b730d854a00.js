@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{"1DEj":function(o,t,n){},QfWi:function(o,t,n){"use strict";n.r(t);n("1DEj"),n("hqZ7")},hqZ7:function(o,t){var n=document.querySelector('button[data-action="open-modal"]'),e=(document.querySelector('button[data-action="open-modal"]'),document.querySelector("modal"));n.addEventListener("click",(function(){document.body.classList.add("show-modal"),e.classList.add("modal-active")}))}},[["QfWi",1]]]);
-//# sourceMappingURL=main.b7225ce50b730d854a00.js.map
