@@ -87,11 +87,13 @@
     line-height: 23px;
   }
 }
+
 .serviceOfferNone {
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
+
 .serviceOffer-laptop {
   @include font($fontRoboto, normal, $color-white);
   display: none;
@@ -108,6 +110,7 @@
     line-height: 23px;
   }
 }
+
 .jobExperience {
   position: relative;
   @media screen and (min-width: 768px) {
@@ -117,21 +120,26 @@
     padding: 0px 0px 311px;
   }
 }
+
 .blokExperience {
-  & > div {
+  display: inline-block;
+
+  &--underline {
     background-color: $color-yellow;
   }
-  &-heading-year {
-    @include font($fontAvangardGITC, normal, $color-yellow);
+  &-heading {
+    @include font($fontRoboto, bold, $color-white);
+    text-transform: uppercase;
+    &-year {
+      @include font($fontAvangardGITC, normal, $color-yellow);
+      text-transform: uppercase;
+    }
   }
   @media screen and (max-width: 767px) {
-    display: inline-block;
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: $color-yellow;
+    width: 106px;
     padding: 185px 0px 70px;
-
-    & > div {
+    @include borderLeft;
+    &--underline {
       width: 80px;
       height: 5px;
       margin: 0px 0px 13px;
@@ -139,32 +147,26 @@
 
     &-heading {
       width: 106px;
-      @include font($fontRoboto, bold, $color-white);
       font-size: 17px;
-      text-transform: uppercase;
       margin: 0;
+
       &-year {
         font-size: 76px;
-        text-transform: uppercase;
         margin: 0;
       }
     }
   }
   @media screen and (min-width: 768px) {
-    display: inline-block;
-
-    & > div {
+    &--underline {
       width: 150px;
       height: 10px;
-      margin: 0px 0px 13px;
+      //margin: 0px 0px 13px;
     }
 
     &-heading {
       width: 146px;
-      @include font($fontRoboto, bold, $color-white);
       font-size: 24px;
       line-height: 28px;
-      text-transform: uppercase;
       margin: 0;
       &-year {
         display: block;
@@ -180,10 +182,10 @@
   @media screen and (min-width: 1440px) {
     position: relative;
     left: 320px;
-    & > div {
+    &--underline {
       width: 200px;
       height: 13px;
-      margin: 0px 0px 13px;
+      //margin: 0px 0px 13px;
     }
 
     &-heading {
@@ -199,62 +201,65 @@
   }
 }
 .blokPaintedWall {
-  & > div {
+  position: absolute;
+  &-heading-more {
+    display: block;
+    @include font($fontRoboto, normal, $color-white);
+  }
+  &-heading-number {
+    @include font($fontAvangardGITC, normal, $color-yellow);
+  }
+  &--underline {
     background-color: $color-yellow;
   }
+  &-heading-text {
+    @include font($fontRoboto, bold, $color-white);
+    text-transform: uppercase;
+  }
   @media screen and (max-width: 767px) {
-    position: absolute;
+    top: 0px;
     left: 157px;
-    display: inline-block;
+    //display: inline-block;
     @include borderLeft;
     padding: 0px 0px 122px;
 
-    & > div {
-      width: 80px;
-      height: 5px;
-      margin: 0px 0px 13px;
-    }
     &-heading-more {
-      display: block;
-      @include font($fontRoboto, normal, $color-white);
       font-size: 15px;
-      margin: 0px 0px 5px;
+      padding-bottom: 5px;
     }
     &-heading-number {
-      @include font($fontAvangardGITC, normal, $color-yellow);
       font-size: 76px;
       line-height: 0.77;
       margin: 0px 0px 15px;
     }
+    &--underline {
+      width: 80px;
+      height: 5px;
+      margin: 0px 0px 13px;
+    }
 
     &-heading-text {
       width: 143px;
-      @include font($fontRoboto, bold, $color-white);
       font-size: 17px;
-      text-transform: uppercase;
       margin: 0px;
     }
   }
   @media screen and (min-width: 768px) {
-    position: absolute;
     left: 220px;
     @include borderLeft;
     padding: 59px 0px 130px;
 
     &-heading-more {
-      display: block;
-      @include font($fontRoboto, normal, $color-white);
       font-size: 20px;
       margin-bottom: 5px;
     }
     &-heading-number {
-      @include font($fontAvangardGITC, normal, $color-yellow);
       font-size: 160px;
       line-height: 0.8;
       letter-spacing: -14px;
       margin: 0px 0px 25px;
     }
-    & > div {
+    &--underline {
       width: 150px;
       height: 10px;
       margin: 0px 0px 15px;
@@ -262,10 +267,9 @@
 
     &-heading-text {
       width: 185px;
-      @include font($fontRoboto, bold, $color-white);
       font-size: 24px;
       line-height: 28px;
-      text-transform: uppercase;
+
       margin: 0px;
     }
   }
@@ -276,7 +280,7 @@
     &-heading-more {
       margin-bottom: 25px;
     }
-    & > div {
+    &--underline {
       width: 200px;
       height: 13px;
       margin: 0px 0px 30px;
@@ -289,88 +293,88 @@
   }
 }
 .amountPain {
-  & > div {
+  display: inline-block;
+  position: absolute;
+
+  &-more {
+    display: block;
+    @include font($fontRoboto, normal, $color-white);
+  }
+  &-number {
+    display: block;
+    @include font($fontAvangardGITC, normal, $color-yellow);
+  }
+  &--underline {
+    display: inline-block;
+    position: relative;
     background-color: $color-yellow;
   }
-  @media screen and (max-width: 767px) {
+
+  &-text {
     display: block;
+    @include font($fontRoboto, bold, $color-white);
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 767px) {
     width: 143px;
-    position: absolute;
     top: 133px;
     right: 0px;
-    @include borderRight;
     padding: 98px 0px 74px;
+    @include borderRight;
 
-    & > div {
-      position: absolute;
-      top: 200px;
-      right: 14px;
+    &-more {
+      padding-left: 34px;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    &--underline {
+      top: 0px;
+      left: 53px;
       width: 80px;
       height: 5px;
-    }
-    &-more {
-      display: block;
-      @include font($fontRoboto, normal, $color-white);
-      font-size: 15px;
-      padding-left: 34px;
+      margin-bottom: 12px;
+      // padding-left: 50px;
     }
     &-number {
-      display: block;
-      // position: relative;
-      @include font($fontAvangardGITC, normal, $color-yellow);
       font-size: 76px;
-      text-align: left;
+      line-height: 80%;
       letter-spacing: -10px;
       padding-left: 25px;
-      margin: 0px;
       margin-bottom: 12px;
     }
     &-text {
-      display: block;
       width: 143px;
-      @include font($fontRoboto, bold, $color-white);
       font-size: 17px;
-      text-transform: uppercase;
-      //padding-left: 5px;
-      margin: 0px;
     }
   }
   @media screen and (min-width: 768px) {
-    position: absolute;
     top: -500px;
     left: 444px;
-    display: block;
-    @include borderLeft;
     padding: 850px 0px 74px;
+    @include borderLeft;
 
-    & > div {
+    &--underline {
       width: 150px;
       height: 10px;
       margin-bottom: 15px;
     }
     &-more {
-      display: block;
-      @include font($fontRoboto, normal, $color-white);
       font-size: 20px;
     }
     &-number {
-      display: block;
       position: relative;
       left: -20px;
-      @include font($fontAvangardGITC, normal, $color-yellow);
       font-size: 160px;
       line-height: 0.8;
       letter-spacing: -25px;
       margin-bottom: 25px;
     }
     &-text {
-      display: block;
       width: 200px;
-      @include font($fontRoboto, bold, $color-white);
       font-size: 24px;
       line-height: 28px;
-      text-transform: uppercase;
-      margin: 0px;
     }
   }
   @media screen and (min-width: 1440px) {
@@ -386,7 +390,7 @@
       letter-spacing: -20px;
       margin: 0px 0px 35px;
     }
-    & > div {
+    &--underline {
       width: 200px;
       height: 13px;
       margin-bottom: 30px;
