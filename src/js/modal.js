@@ -1,19 +1,22 @@
 const openModalBtn = document.querySelector('button[data-action="open-modal"]');
 const backDrop = document.querySelector('.js-backdrop');
 const RefBtnMenu = document.querySelector('.js-btn-menu');
-const anchors = document.querySelectorAll('.nav__Link[href*="#"]');
-const anchorsMenu = document.querySelectorAll('.navLink[href*="#"]');
 const closeModalLink = document.querySelectorAll('a[data-menu="close-modal"]');
+console.log(closeModalLink);
+const anchors = document.querySelectorAll('.nav__Link[href*="#"]');
+console.log(anchors);
+const anchorsMenu = document.querySelectorAll('.navLink[href*="#"]');
 
 openModalBtn.addEventListener('click', closeModal);
 
 backDrop.addEventListener('click', closeBackdrop);
 
-closeModalLink.forEach(link => {
-  return link.addEventListener('click', onModalScrollToElm);
-});
+// closeModalLink.forEach(link => {
+//   return link.addEventListener('click', onModalScrollToElm);
+// });
 
 ScrollToElm();
+onModalScrollToElm();
 
 function closeModal() {
   document.body.classList.toggle('show-modal');
@@ -26,18 +29,18 @@ function closeBackdrop(e) {
   }
 }
 
-function onModalScrollToElm(event) {
+function onModalScrollToElm() {
   anchors.forEach(elm => {
-    elm.addEventListener('click', () => {
+    elm.addEventListener('click', event => {
       event.preventDefault();
       const id = elm.getAttribute('href');
       document
         .querySelector('' + id)
         .scrollIntoView({ block: 'start', behavior: 'smooth' });
+      RefBtnMenu.classList.replace('toggled', 'unToggled');
+      closeModal();
     });
   });
-  RefBtnMenu.classList.replace('toggled', 'unToggled');
-  closeModal();
 }
 
 function ScrollToElm() {
