@@ -31,7 +31,7 @@
               <div class="line-menu"></div>
             </button>
             <img class="logoArt" src="./images/artpchela_logo.svg" alt="" />
-            <a href="#contacts" class="iconMenu">
+            <a href="tel:+380660069285" class="iconMenu">
               <svg class="svg-call">
                 <use href="./images/sprite-icons.svg#call-1"></use>
               </svg>
@@ -323,6 +323,7 @@
                 name="phone-number"
                 id="phone_number"
                 required
+                data-number="number"
             /></label>
             <label class="blockInput" for="wall_size">
               <span class="inputName">размер стены</span>
@@ -332,6 +333,7 @@
                 name="wall-size"
                 id="wall_size"
                 required
+                placeholder="ширина 200см высота 180см"
               />
             </label>
             <p class="sketch">эскиз росписи</p>
@@ -488,26 +490,40 @@
         </div>
       </div>
     </footer>
-  </body>
-  <!--Modal menu mobile view-->
-  <div class="backdrop js-backdrop">
-    <div class="modal">
-      <nav class="nav-menu">
-        <ul class="nav__List">
-          <li class="nav__Item">
-            <a href="#about" class="nav__Link about">О нас</a>
-          </li>
-          <li class="nav__Item">
-            <a href="#price" class="nav__Link portfolio">Портфолио</a>
-          </li>
-          <li class="nav__Item">
-            <a href="#price" class="nav__Link price">Цены</a>
-          </li>
-          <li class="nav__Item">
-            <a href="#contacts" class="nav__Link contacts">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+    <!--Modal menu mobile view-->
+    <div class="backdrop js-backdrop">
+      <div class="modal">
+        <nav class="nav-menu">
+          <ul class="nav__List">
+            <li class="nav__Item">
+              <a href="#about" class="nav__Link about" data-menu="close-modal"
+                >О нас</a
+              >
+            </li>
+            <li class="nav__Item">
+              <a
+                href="#price"
+                class="nav__Link portfolio"
+                data-menu="close-modal"
+                >Портфолио</a
+              >
+            </li>
+            <li class="nav__Item">
+              <a href="#price" class="nav__Link price" data-menu="close-modal"
+                >Цены</a
+              >
+            </li>
+            <li class="nav__Item">
+              <a
+                href="#contacts"
+                class="nav__Link contacts"
+                data-menu="close-modal"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
+  </body>
 </html>
