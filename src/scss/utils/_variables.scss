@@ -2,16 +2,30 @@ $color-yellow: #ffff00;
 $color-black: #0b0a0a;
 $color-white: #ffffff;
 $fontRoboto: 'Roboto';
-$fontAvangard: 'AvantGardeGothicC-Book';
-$fontAvangardGITC: 'AvantGardeGothicITC';
-
+// $fontAvangard: 'AvantGardeGothicC-Book';
+// $fontAvangardGITC: 'AvantGardeGothicITC';
+$fontAvangard: 'AvantGardeGothicBkITCRegular';
+$fontAvangardGITC: 'AvantGardeGothicDmITCRegular';
 @font-face {
   font-family: 'AvantGardeGothicITC';
   src: url('/fonts/ITCAvantGardeStd-Bk.ttf');
 }
+// @font-face {
+//   font-family: 'AvantGardeGothicDmITCRegular';
+//   src: local('AvantGardeGothicDmITC Reg');
+// }
 @font-face {
   font-family: 'AvantGardeGothicC-Book';
   src: local('AvantGardeGothicC-Book'),
     url('https://nomail.com.ua/files/woff/594f58488829c29a4d8ac24fd70dc79f.woff')
       format('woff');
+}
+@font-face {
+  font-family: 'AvantGardeGothicBkITCRegular';
+  src: url('/fonts/AvantGardeGothicBkITCRegular.ttf');
+}
+
+@font-face {
+  font-family: 'AvantGardeGothicDmITCRegular';
+  src: url('/fonts/AvantGardeGothicDmITCRegular.ttf');
 }

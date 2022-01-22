@@ -122,16 +122,19 @@
 }
 
 .blokExperience {
-  display: inline-block;
+  //display: block;
 
   &--underline {
     background-color: $color-yellow;
   }
   &-heading {
+    display: block;
     @include font($fontRoboto, bold, $color-white);
     text-transform: uppercase;
     &-year {
-      @include font($fontAvangardGITC, normal, $color-yellow);
+      display: block;
+      @include font($fontAvangard, normal, $color-yellow);
+      //line-height: normal;
       text-transform: uppercase;
     }
   }
@@ -152,7 +155,7 @@
 
       &-year {
         font-size: 76px;
-        margin: 0;
+        // margin-bottom: 13px;
       }
     }
   }
@@ -169,12 +172,12 @@
       line-height: 28px;
       margin: 0;
       &-year {
-        display: block;
+        //display: block;
         @include borderLeft;
-        padding: 370px 0px 25px;
-        margin: 0px;
+        padding: 370px 0px 0px;
+        //margin: 0px;
         font-size: 160px;
-        line-height: 0.8;
+        //line-height: 0.8;
         text-transform: uppercase;
       }
     }
@@ -190,29 +193,35 @@
 
     &-heading {
       position: absolute;
-      top: 210px;
+      top: 240px;
       left: 80px;
       width: 150px;
       &-year {
+        position: relative;
+        top: 0px;
         font-size: 170px;
-        padding: 145px 0px 35px;
+        padding: 145px 0px 0px;
       }
     }
   }
 }
 .blokPaintedWall {
+  //display: flex;
+  // flex-direction: column;
   position: absolute;
   &-heading-more {
     display: block;
     @include font($fontRoboto, normal, $color-white);
   }
   &-heading-number {
-    @include font($fontAvangardGITC, normal, $color-yellow);
+    display: block;
+    @include font($fontAvangard, normal, $color-yellow);
   }
   &--underline {
     background-color: $color-yellow;
   }
   &-heading-text {
+    display: block;
     @include font($fontRoboto, bold, $color-white);
     text-transform: uppercase;
   }
@@ -224,13 +233,19 @@
     padding: 0px 0px 122px;
 
     &-heading-more {
+      position: relative;
+      top: 12px;
       font-size: 15px;
-      padding-bottom: 5px;
+      //padding-bottom: 5px;
     }
     &-heading-number {
+      position: relative;
+      top: 10px;
+      // display: flex;
+      // align-items: flex-end;
       font-size: 76px;
-      line-height: 0.77;
-      margin: 0px 0px 15px;
+      //line-height: 80%;
+      //margin: 0px 0px 15px;
     }
     &--underline {
       width: 80px;
@@ -250,14 +265,18 @@
     padding: 59px 0px 130px;
 
     &-heading-more {
+      position: relative;
+      top: 10px;
       font-size: 20px;
-      margin-bottom: 5px;
+      //margin-bottom: 5px;
     }
     &-heading-number {
+      position: relative;
+      top: 10px;
       font-size: 160px;
-      line-height: 0.8;
-      letter-spacing: -14px;
-      margin: 0px 0px 25px;
+      //line-height: 0.8;
+      //letter-spacing: 0px;
+      // margin: 0px 0px 25px;
     }
     &--underline {
       width: 150px;
@@ -278,7 +297,8 @@
     left: 640px;
     padding: 356px 0px 170px;
     &-heading-more {
-      margin-bottom: 25px;
+      top: 10px;
+      //margin-bottom: 25px;
     }
     &--underline {
       width: 200px;
@@ -287,8 +307,9 @@
     }
 
     &-heading-number {
+      top: 0px;
       font-size: 170px;
-      margin: 0px 0px 35px;
+      //margin: 0px 0px 0px;
     }
   }
 }
@@ -302,7 +323,7 @@
   }
   &-number {
     display: block;
-    @include font($fontAvangardGITC, normal, $color-yellow);
+    @include font($fontAvangard, normal, $color-yellow);
   }
   &--underline {
     display: inline-block;
@@ -324,8 +345,10 @@
     @include borderRight;
 
     &-more {
+      position: relative;
+      top: 10px;
       padding-left: 34px;
-      margin-bottom: 5px;
+      //margin-bottom: 5px;
       font-size: 15px;
     }
 
@@ -338,11 +361,13 @@
       // padding-left: 50px;
     }
     &-number {
+      position: relative;
+      top: 10px;
       font-size: 76px;
-      line-height: 80%;
-      letter-spacing: -10px;
+      //line-height: 80%;
+      letter-spacing: -6px;
       padding-left: 25px;
-      margin-bottom: 12px;
+      //margin-bottom: 12px;
     }
     &-text {
       width: 143px;
@@ -361,15 +386,18 @@
       margin-bottom: 15px;
     }
     &-more {
+      position: relative;
+      top: 10px;
       font-size: 20px;
     }
     &-number {
       position: relative;
+      top: 10px;
       left: -20px;
       font-size: 160px;
-      line-height: 0.8;
-      letter-spacing: -25px;
-      margin-bottom: 25px;
+      //line-height: 0.8;
+      letter-spacing: -8px;
+      // margin-bottom: 25px;
     }
     &-text {
       width: 200px;
@@ -382,13 +410,15 @@
     left: 965px;
     padding: 725px 0px 240px;
     &-more {
-      margin-bottom: 25px;
+      top: 10px;
+      //margin-bottom: 25px;
     }
     &-number {
+      top: 0px;
       font-size: 170px;
-      line-height: 0.8;
-      letter-spacing: -20px;
-      margin: 0px 0px 35px;
+      //line-height: 0.8;
+      letter-spacing: -6px;
+      //margin: 0px 0px 35px;
     }
     &--underline {
       width: 200px;

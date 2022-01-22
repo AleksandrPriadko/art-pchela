@@ -1,6 +1,7 @@
 import IMask from 'imask';
 
 const inputNumber = document.querySelector('input[data-number="number"]');
+onInputMaskNumber();
 
 function onInputMaskNumber() {
   const maskOptions = {
@@ -10,4 +11,3 @@ function onInputMaskNumber() {
   const maskNumber = IMask(inputNumber, maskOptions);
   return maskNumber;
 }
-onInputMaskNumber();

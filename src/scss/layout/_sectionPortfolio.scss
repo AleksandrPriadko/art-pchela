@@ -55,3 +55,25 @@
     height: 6px;
   }
 }
+
+.block-portfolio__list {
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.block-portfolio__item {
+  @media (min-width: 1440px) {
+    width: 637px;
+    height: 380px;
+    //object-fit: cover;
+  }
+}
+.block-portfolio__link {
+  @media (min-width: 1440px) {
+    width: 637px;
+    height: 380px;
+    object-fit: cover;
+  }
+}

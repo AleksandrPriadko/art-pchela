@@ -54,31 +54,26 @@
   }
 }
 .text-iwp {
+  @include font($fontAvangard, normal, $color-black);
+  text-transform: uppercase;
   @media screen and (max-width: 767px) {
     display: block;
-    @include font($fontAvangard, normal, $color-black);
     font-size: 70px;
     line-height: 80px;
-    text-transform: uppercase;
     text-align: left;
     margin-top: 0px;
     margin-bottom: 10px;
   }
   @media screen and (min-width: 768px) {
-    @include font($fontAvangard, normal, $color-black);
     font-size: 150px;
     line-height: 160px;
-    text-transform: uppercase;
 
     margin: 0px 0px 40px;
   }
   @media screen and (min-width: 1440px) {
     margin-left: 45px;
-    @include font($fontAvangardGITC, normal, $color-black);
     font-size: 280px;
     line-height: 250px;
-
-    text-transform: uppercase;
   }
 }
 

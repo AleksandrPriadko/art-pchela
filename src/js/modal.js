@@ -1,19 +1,14 @@
 const openModalBtn = document.querySelector('button[data-action="open-modal"]');
 const backDrop = document.querySelector('.js-backdrop');
 const RefBtnMenu = document.querySelector('.js-btn-menu');
-const closeModalLink = document.querySelectorAll('a[data-menu="close-modal"]');
-console.log(closeModalLink);
 const anchors = document.querySelectorAll('.nav__Link[href*="#"]');
-console.log(anchors);
+
 const anchorsMenu = document.querySelectorAll('.navLink[href*="#"]');
 
 openModalBtn.addEventListener('click', closeModal);
 
 backDrop.addEventListener('click', closeBackdrop);
 
-// closeModalLink.forEach(link => {
-//   return link.addEventListener('click', onModalScrollToElm);
-// });
 
 ScrollToElm();
 onModalScrollToElm();
