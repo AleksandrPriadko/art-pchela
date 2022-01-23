@@ -18,7 +18,7 @@
 .heading-kit {
   display: block;
 
-  @include font($fontAvangardGITC, normal, $color-black);
+  @include font($fontAvangard, normal, $color-black);
   letter-spacing: -0.05em;
   text-transform: uppercase;
 
