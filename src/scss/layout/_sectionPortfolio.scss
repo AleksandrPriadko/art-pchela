@@ -97,6 +97,7 @@
     margin-bottom: 15px;
 
     transform: translateX(-574px);
+    transition: transform 250ms ease-in-out;
   }
 }
 .block-portfolio__list-two {
@@ -108,7 +109,8 @@
     height: 382px;
 
     //margin-bottom: 15px;
-    transform: translateX(401.5px);
+    transform: translateX(-240.5px);
+    transition: transform 250ms ease-in-out;
   }
 }
 
@@ -184,4 +186,9 @@
     padding: 0;
     fill: $color-white;
   }
+}
+
+.btn-slider-prev:hover .icon-arrow-prev,
+.btn-slider-next:hover .icon-arrow-next {
+  fill: $color-yellow;
 }

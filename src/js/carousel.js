@@ -13,23 +13,28 @@ let width = 652;
 nextBtn.addEventListener('click', onClickImgNext);
 prevBtn.addEventListener('click', onClickImgPrev);
 
+sliderOne.slick({
+  infinite: true,
+  slidesToScroll: 1,
+});
+
 function onClickImgNext() {
   //console.log((direction += 1));
   direction += 1;
   sliderOne.style.transform = `translateX(${-574 - width * direction}px)`;
-  sliderTwo.style.transform = `translateX(${401.5 - width * direction}px)`;
-  // console.log(
-  //   (sliderTwo.style.transform = `translateX(${401.5 - width * direction}px)`),
-  // );
+  //sliderTwo.style.transform = `translateX(${401.5 - width * direction}px)`;
+  console.log(
+    (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
+  );
 }
 function onClickImgPrev() {
   //console.log((direction -= 1));
   direction -= 1;
   sliderOne.style.transform = `translateX(${-574 - width * direction}px)`;
-  sliderTwo.style.transform = `translateX(${401.5 - width * direction}px)`;
-  // console.log(
-  //   (sliderTwo.style.transform = `translateX(${401.5 - width * direction}px)`),
-  // );
+  //sliderTwo.style.transform = `translateX(${401.5 - width * direction}px)`;
+  console.log(
+    (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
+  );
 }
 // nextBtn.onclick = function () {
 //   slider.style.transform = 'translateX(' + -size + 'px)';
