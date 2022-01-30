@@ -1,69 +1,127 @@
+import img from '../portfolio.json';
+console.log(img);
+const blockPortfolio = document.querySelector('.block-portfolio');
+
+const listImgTop = document.createElement('ul');
+listImgTop.classList.add('block-portfolio__list-one');
+
+const listImgBottom = document.createElement('ul');
+listImgBottom.classList.add('block-portfolio__list-two');
+
 const sliderOne = document.querySelector('.block-portfolio__list-one');
 const sliderTwo = document.querySelector('.block-portfolio__list-two');
-console.log('Slider: ', sliderOne);
 
 const prevBtn = document.querySelector('.btn-slider-prev');
 const nextBtn = document.querySelector('.btn-slider-next');
 
 let size = document.querySelector('.block-portfolio__item'); //.clientWidth;
-console.dir(size);
-let direction = 0;
+
+let indexEnd = img.length / 2;
+let indexBegin = img.length / 2;
+const arrayImgFirst = img.slice(0, indexEnd);
+const arrayImgSecond = img.slice(indexBegin);
+
+const arrayItemsImgTop = arrayImgFirst.map(({ imgUrl, alt }) => {
+  return createImgCardTop({ imgUrl, alt });
+});
+const arrayItemsImgBottom = arrayImgSecond.map(({ imgUrl, alt }) => {
+  return createImgCardBottom({ imgUrl, alt });
+});
+console.log(arrayItemsImgTop);
+listImgTop.append(...arrayItemsImgTop);
+listImgBottom.append(...arrayItemsImgBottom);
+blockPortfolio.prepend(listImgTop, listImgBottom);
+
+function createImgCardTop({ imgUrl, alt }) {
+  const item = document.createElement('li');
+  item.classList.add('block-portfolio__item', 'js-item-slide-top');
+
+  const images = document.createElement('img');
+  images.classList.add('block-portfolio__link');
+  images.setAttribute('src', imgUrl);
+  images.setAttribute('alt', alt);
+  item.appendChild(images);
+
+  return item;
+}
+function createImgCardBottom({ imgUrl, alt }) {
+  const item = document.createElement('li');
+  item.classList.add('block-portfolio__item', 'js-item-slide-bottom');
+
+  const images = document.createElement('img');
+  images.classList.add('block-portfolio__link');
+  images.setAttribute('src', imgUrl);
+  images.setAttribute('alt', alt);
+  item.appendChild(images);
+
+  return item;
+}
+
+let direction = 1;
 let width = 652;
-// buttons
+// // buttons
 nextBtn.addEventListener('click', onClickImgNext);
 prevBtn.addEventListener('click', onClickImgPrev);
-
-sliderOne.slick({
-  infinite: true,
-  slidesToScroll: 1,
-});
 
 function onClickImgNext() {
   //console.log((direction += 1));
   direction += 1;
-  sliderOne.style.transform = `translateX(${-574 - width * direction}px)`;
-  //sliderTwo.style.transform = `translateX(${401.5 - width * direction}px)`;
-  console.log(
-    (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
-  );
+  listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
+  listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
+  // console.log(
+  //   (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
+  // );
 }
 function onClickImgPrev() {
   //console.log((direction -= 1));
   direction -= 1;
-  sliderOne.style.transform = `translateX(${-574 - width * direction}px)`;
-  //sliderTwo.style.transform = `translateX(${401.5 - width * direction}px)`;
-  console.log(
-    (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
-  );
+  listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
+  listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
+  // console.log(
+  //   (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
+  // );
 }
-// nextBtn.onclick = function () {
-//   slider.style.transform = 'translateX(' + -size + 'px)';
-//   direction = 1;
-// };
 
-// prevBtn.onclick = function () {
-//   direction = -1;
-//   slider.style.transform = 'translateX(' + size + 'px)';
-// };
+// // after transition event
+listImgTop.addEventListener('transitionend', infinitySliderTop);
+listImgBottom.addEventListener('transitionend', infinitySliderBottom);
+function infinitySliderTop() {
+  let slides = document.querySelectorAll('.js-item-slide-top');
 
-// after transition event
-// slider.addEventListener('transitionend', function () {
-//   let slides = document.querySelectorAll('.block-portfolio__item');
+  if (direction < 0) {
+    for (let i = 0; i > direction; i--) {
+      listImgTop.prepend(slides[slides.length + i - 1]);
+    }
+  } else if (direction > 0) {
+    for (let i = 0; i < direction; i++) {
+      listImgTop.append(slides[i]);
+    }
+  }
 
-//   if (direction < 0) {
-//     for (let i = 0; i > direction; i--) {
-//       slider.prepend(slides[slides.length + i - 1]);
-//     }
-//   } else if (direction > 0) {
-//     for (let i = 0; i < direction; i++) {
-//       slider.append(slides[i]);
-//     }
-//   }
+  // re-init transition
+  listImgTop.style.transition = 'none';
+  listImgTop.style.transform = 'translate(0)';
+  setTimeout(() => {
+    listImgTop.style.transition = 'transform 0.5s ease-in-out';
+  }, 0);
+}
+function infinitySliderBottom() {
+  let slides = document.querySelectorAll('.js-item-slide-bottom');
 
-//   // re-init transition
-//   slider.style.transition = 'none';
-//   slider.style.transform = 'translate(0)';
-//   setTimeout(() => {
-//     slider.style.transition = 'transform 0.5s ease-in-out';
-//   }, 0);
-// });
+  if (direction < 0) {
+    for (let i = 0; i > direction; i--) {
+      listImgBottom.prepend(slides[slides.length + i - 1]);
+    }
+  } else if (direction > 0) {
+    for (let i = 0; i < direction; i++) {
+      listImgBottom.append(slides[i]);
+    }
+  }
+
+  // re-init transition
+  listImgBottom.style.transition = 'none';
+  listImgBottom.style.transform = 'translate(0)';
+  setTimeout(() => {
+    listImgBottom.style.transition = 'transform 0.5s ease-in-out';
+  }, 0);
+}
