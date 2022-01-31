@@ -3,3 +3,4 @@ import './js/modal';
 import './js/btn-menu';
 import './js/formMask';
 import './js/carousel';
+import './js/btnBackUp';

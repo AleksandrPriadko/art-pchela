@@ -64,30 +64,60 @@ nextBtn.addEventListener('click', onClickImgNext);
 prevBtn.addEventListener('click', onClickImgPrev);
 
 function onClickImgNext() {
-  //console.log((direction += 1));
   direction += 1;
-  listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
-  listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
+  // listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
+  // listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
   // console.log(
   //   (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
   // );
+
+  let slides = document.querySelectorAll('.js-item-slide-bottom');
+
+  if (direction < 0) {
+    for (let i = 0; i > direction; i--) {
+      listImgBottom.prepend(slides[slides.length + i - 1]);
+    }
+  } else if (direction > 0) {
+    for (let i = 0; i < direction; i++) {
+      listImgBottom.append(slides[i]);
+    }
+  }
+  let slidesTop = document.querySelectorAll('.js-item-slide-top');
+  if (direction < 0) {
+    for (let i = 0; i > direction; i--) {
+      listImgTop.prepend(slidesTop[slidesTop.length + i - 1]);
+    }
+  } else if (direction > 0) {
+    for (let i = 0; i < direction; i++) {
+      listImgTop.append(slidesTop[i]);
+    }
+  }
 }
 function onClickImgPrev() {
-  //console.log((direction -= 1));
   direction -= 1;
-  listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
-  listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
+  // listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
+  // listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
   // console.log(
   //   (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
   // );
+
+  let slides = document.querySelectorAll('.js-item-slide-top');
+  if (direction < 0) {
+    for (let i = 0; i > direction; i--) {
+      listImgTop.prepend(slides[slides.length + i - 1]);
+    }
+  } else if (direction > 0) {
+    for (let i = 0; i < direction; i++) {
+      listImgTop.append(slides[i]);
+    }
+  }
 }
 
 // // after transition event
-listImgTop.addEventListener('transitionend', infinitySliderTop);
-listImgBottom.addEventListener('transitionend', infinitySliderBottom);
+// listImgTop.addEventListener('transitionend', infinitySliderTop);
+// listImgBottom.addEventListener('transitionend', infinitySliderBottom);
 function infinitySliderTop() {
   let slides = document.querySelectorAll('.js-item-slide-top');
-
   if (direction < 0) {
     for (let i = 0; i > direction; i--) {
       listImgTop.prepend(slides[slides.length + i - 1]);
@@ -99,11 +129,11 @@ function infinitySliderTop() {
   }
 
   // re-init transition
-  listImgTop.style.transition = 'none';
-  listImgTop.style.transform = 'translate(0)';
-  setTimeout(() => {
-    listImgTop.style.transition = 'transform 0.5s ease-in-out';
-  }, 0);
+  //listImgTop.style.transition = 'none';
+  //listImgTop.style.transform = 'translateX(-574px)';
+  // setTimeout(() => {
+  //   listImgTop.style.transition = 'transform 0.5s ease-in-out';
+  // }, 0);
 }
 function infinitySliderBottom() {
   let slides = document.querySelectorAll('.js-item-slide-bottom');
@@ -119,9 +149,9 @@ function infinitySliderBottom() {
   }
 
   // re-init transition
-  listImgBottom.style.transition = 'none';
-  listImgBottom.style.transform = 'translate(0)';
-  setTimeout(() => {
-    listImgBottom.style.transition = 'transform 0.5s ease-in-out';
-  }, 0);
+  //listImgBottom.style.transition = 'none';
+  //listImgBottom.style.transform = 'translateX(-240.5px)';
+  // setTimeout(() => {
+  //   listImgBottom.style.transition = 'transform 0.5s ease-in-out';
+  // }, 0);
 }

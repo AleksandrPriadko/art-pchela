@@ -1,0 +1,10 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-loon-icon-1" viewBox="0 0 32 32">
+<path d="M8.9 31.099l15.099-15.099-15.099-15.099-0.898 0.904 14.194 14.194-14.194 14.194z"></path>
+</symbol>
+<symbol id="icon-loon-icon" viewBox="0 0 32 32">
+<path d="M8.013 29.978c0-0.255 0.098-0.511 0.293-0.706l13.272-13.272-13.272-13.272c-0.39-0.39-0.39-1.022 0-1.412s1.022-0.39 1.412 0l13.978 13.978c0.39 0.39 0.39 1.022 0 1.412l-13.978 13.978c-0.39 0.39-1.022 0.39-1.412 0-0.195-0.195-0.293-0.451-0.293-0.706z"></path>
+</symbol>
+</defs>
+</svg>
