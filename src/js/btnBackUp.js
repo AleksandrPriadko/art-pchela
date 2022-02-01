@@ -5,6 +5,7 @@ let intViewportHeight = window.innerHeight;
 window.addEventListener('scroll', showBtn);
 btn.addEventListener('click', scrollToUp);
 
+//Show button back to up
 function showBtn() {
   let scrollY = window.pageYOffset;
   if (scrollY > intViewportHeight) {
@@ -14,7 +15,7 @@ function showBtn() {
   }
   return;
 }
-//showBtn();
+//scroll up;
 function scrollToUp() {
   return window.scrollTo({
     top: 0,

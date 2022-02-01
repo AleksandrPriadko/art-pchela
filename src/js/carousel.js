@@ -1,3 +1,4 @@
+//import Swiper from 'swiper';
 import img from '../portfolio.json';
 console.log(img);
 const blockPortfolio = document.querySelector('.block-portfolio');
@@ -8,13 +9,13 @@ listImgTop.classList.add('block-portfolio__list-one');
 const listImgBottom = document.createElement('ul');
 listImgBottom.classList.add('block-portfolio__list-two');
 
-const sliderOne = document.querySelector('.block-portfolio__list-one');
-const sliderTwo = document.querySelector('.block-portfolio__list-two');
+// const sliderOne = document.querySelector('.block-portfolio__list-one');
+// const sliderTwo = document.querySelector('.block-portfolio__list-two');
 
 const prevBtn = document.querySelector('.btn-slider-prev');
 const nextBtn = document.querySelector('.btn-slider-next');
 
-let size = document.querySelector('.block-portfolio__item'); //.clientWidth;
+//let size = document.querySelector('.block-portfolio__item'); //.clientWidth;
 
 let indexEnd = img.length / 2;
 let indexBegin = img.length / 2;
@@ -27,7 +28,7 @@ const arrayItemsImgTop = arrayImgFirst.map(({ imgUrl, alt }) => {
 const arrayItemsImgBottom = arrayImgSecond.map(({ imgUrl, alt }) => {
   return createImgCardBottom({ imgUrl, alt });
 });
-console.log(arrayItemsImgTop);
+
 listImgTop.append(...arrayItemsImgTop);
 listImgBottom.append(...arrayItemsImgBottom);
 blockPortfolio.prepend(listImgTop, listImgBottom);
@@ -65,52 +66,52 @@ prevBtn.addEventListener('click', onClickImgPrev);
 
 function onClickImgNext() {
   direction += 1;
-  // listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
-  // listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
+  listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
+  listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
   // console.log(
   //   (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
   // );
 
-  let slides = document.querySelectorAll('.js-item-slide-bottom');
+  // let slides = document.querySelectorAll('.js-item-slide-bottom');
 
-  if (direction < 0) {
-    for (let i = 0; i > direction; i--) {
-      listImgBottom.prepend(slides[slides.length + i - 1]);
-    }
-  } else if (direction > 0) {
-    for (let i = 0; i < direction; i++) {
-      listImgBottom.append(slides[i]);
-    }
-  }
-  let slidesTop = document.querySelectorAll('.js-item-slide-top');
-  if (direction < 0) {
-    for (let i = 0; i > direction; i--) {
-      listImgTop.prepend(slidesTop[slidesTop.length + i - 1]);
-    }
-  } else if (direction > 0) {
-    for (let i = 0; i < direction; i++) {
-      listImgTop.append(slidesTop[i]);
-    }
-  }
+  // if (direction < 0) {
+  //   for (let i = 0; i > direction; i--) {
+  //     listImgBottom.prepend(slides[slides.length + i - 1]);
+  //   }
+  // } else if (direction > 0) {
+  //   for (let i = 0; i < direction; i++) {
+  //     listImgBottom.append(slides[i]);
+  //   }
+  // }
+  // let slidesTop = document.querySelectorAll('.js-item-slide-top');
+  // if (direction < 0) {
+  //   for (let i = 0; i > direction; i--) {
+  //     listImgTop.prepend(slidesTop[slidesTop.length + i - 1]);
+  //   }
+  // } else if (direction > 0) {
+  //   for (let i = 0; i < direction; i++) {
+  //     listImgTop.append(slidesTop[i]);
+  //   }
+  // }
 }
 function onClickImgPrev() {
   direction -= 1;
-  // listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
-  // listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
+  listImgTop.style.transform = `translateX(${-574 - width * direction}px)`;
+  listImgBottom.style.transform = `translateX(${-240.5 - width * direction}px)`;
   // console.log(
   //   (sliderTwo.style.transform = `translateX(${-240.5 - width * direction}px)`),
   // );
 
-  let slides = document.querySelectorAll('.js-item-slide-top');
-  if (direction < 0) {
-    for (let i = 0; i > direction; i--) {
-      listImgTop.prepend(slides[slides.length + i - 1]);
-    }
-  } else if (direction > 0) {
-    for (let i = 0; i < direction; i++) {
-      listImgTop.append(slides[i]);
-    }
-  }
+  // let slides = document.querySelectorAll('.js-item-slide-top');
+  // if (direction < 0) {
+  //   for (let i = 0; i > direction; i--) {
+  //     listImgTop.prepend(slides[slides.length + i - 1]);
+  //   }
+  // } else if (direction > 0) {
+  //   for (let i = 0; i < direction; i++) {
+  //     listImgTop.append(slides[i]);
+  //   }
+  // }
 }
 
 // // after transition event

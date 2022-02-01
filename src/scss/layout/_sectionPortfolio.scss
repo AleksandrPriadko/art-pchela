@@ -1,79 +1,96 @@
 .sectionPortfolio {
   background-color: $color-black;
-  padding: 75px 0px 124px;
+  padding: 75px 0px 75px;
+  @media screen and (min-width: 768px) {
+    .sectionPortfolio {
+      padding: 60px 0px 60px;
+    }
+  }
 }
-@media screen and (max-width: 767px) {
-  .portfolioHeading {
-    position: relative;
-    z-index: 2;
-    @include font($fontRoboto, bold, $color-white);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: bold;
+
+.block-container {
+  position: relative;
+}
+
+.portfolioHeading {
+  position: relative;
+  z-index: 2;
+  @include font($fontRoboto, bold, $color-white);
+  text-transform: uppercase;
+
+  &-underline {
+    position: absolute;
+    z-index: 1;
+    background-color: $color-yellow;
+  }
+
+  @media screen and (max-width: 767px) {
     font-size: 30px;
     text-align: center;
-    text-transform: uppercase;
 
-    //color: $color-white;
-    margin: 0px;
+    &-underline {
+      top: -8px;
+      left: 75px;
+      width: 184px;
+      height: 4px;
+    }
   }
-  .portfolioHeading-underline {
-    position: relative;
-    z-index: 1;
-    top: -8px;
-    left: 75px;
-    background-color: $color-yellow;
-    width: 184px;
-    height: 4px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sectionPortfolio {
-    padding: 60px 0px 60px;
-  }
-  .portfolioHeading {
-    position: relative;
-    z-index: 2;
-    @include font($fontRoboto, bold, $color-white);
-    // font-family: $fontRoboto;
-    // font-style: normal;
-    // font-weight: bold;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
     font-size: 48px;
     text-align: left;
-    text-transform: uppercase;
 
-    //color: $color-white;
-    margin: 0px;
+    &-underline {
+      top: 42px;
+      left: 67px;
+      width: 296px;
+      height: 6px;
+    }
   }
-  .portfolioHeading-underline {
-    position: relative;
-    z-index: 1;
-    top: -13px;
-    left: 17px;
-    background-color: $color-yellow;
-    width: 296px;
-    height: 6px;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 100px;
+    font-size: 64px;
+    &-underline {
+      top: 55px;
+      left: 102px;
+      width: 391px;
+      height: 8px;
+    }
   }
 }
 
 .block-portfolio {
-  @media (min-width: 1440px) {
-    //position: relative;
-    z-index: 3;
-    display: flex;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  @media (max-width: 767px) {
+    left: -30px;
+
     flex-direction: row;
     flex-wrap: wrap;
-    //justify-content: space-around;
-    position: relative;
-    left: -80px;
-    width: 1440px;
+    width: 375px;
     overflow: hidden;
     //box-shadow: 50px 0px 26px -15px rgba(0, 0, 0, 1) inset;
+  }
+  @media (min-width: 768px) {
+    left: -50px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 768px;
+    overflow: hidden;
+    //box-shadow: 50px 0px 26px -15px rgba(0, 0, 0, 1) inset;
+  }
+  @media (min-width: 1440px) {
+    left: -80px;
+
+    width: 1440px;
+    overflow: hidden;
   }
 }
 
 .block-portfolio > .block-portfolio__list-two {
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     display: flex;
     // flex-direction: row;
     // flex-wrap: wrap;
@@ -87,36 +104,57 @@
 }
 
 .block-portfolio__list-one {
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     display: flex;
     //flex-wrap: wrap;
     //width: 100%;
     //width: 2600px;
+    height: 260px;
+
+    margin-bottom: 10px;
+
+    transform: translateX(-395px);
+    transition: transform 250ms ease-in-out;
+  }
+  @media (min-width: 1440px) {
     height: 382px;
 
     margin-bottom: 15px;
 
     transform: translateX(-574px);
-    transition: transform 250ms ease-in-out;
   }
 }
 .block-portfolio__list-two {
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     display: flex;
     //flex-wrap: wrap;
     // width: 100%;
     //width: 2600px;
+    height: 260px;
+
+    //margin-bottom: 15px;
+    transform: translateX(-178.5px);
+    transition: transform 250ms ease-in-out;
+  }
+  @media (min-width: 1440px) {
     height: 382px;
 
     //margin-bottom: 15px;
     transform: translateX(-240.5px);
-    transition: transform 250ms ease-in-out;
   }
 }
 
 .block-portfolio__item {
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     display: block;
+    width: 438px;
+    height: 260px;
+
+    margin-right: 10px;
+
+    //object-fit: cover;
+  }
+  @media (min-width: 1440px) {
     width: 637px;
     height: 380px;
 
@@ -126,7 +164,7 @@
   }
 }
 .block-portfolio__link {
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     display: block;
     width: 100%;
     height: 100%;
@@ -138,53 +176,74 @@
 
 .btn-slider-next,
 .btn-slider-prev {
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
+    position: absolute;
+    z-index: 600;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    z-index: 100;
-    width: 122px;
-    height: 122px;
+    width: 80px;
+    height: 80px;
     padding: 0px;
     border-radius: 50%;
     border: none;
     background: rgba(11, 10, 10, 0.7);
   }
+  @media (min-width: 1440px) {
+    width: 122px;
+    height: 122px;
+  }
 }
 
 .btn-slider-prev {
+  @media (min-width: 768px) {
+    top: 225px;
+    left: 35px;
+  }
   @media (min-width: 1440px) {
     top: 328.5px;
     left: 35px;
   }
 }
 .btn-slider-next {
+  @media (min-width: 768px) {
+    top: 225px;
+    right: 35px;
+  }
   @media (min-width: 1440px) {
     top: 328.5px;
     right: 35px;
   }
 }
 .icon-arrow-prev {
-  @media (min-width: 1440px) {
+  @media (min-width: 768px) {
     //display: inline;
-    width: 60px;
-    height: 70px;
+    width: 100%;
+    height: 55px;
     margin: 0;
     padding: 0;
     fill: $color-white;
 
     transform: rotate(180deg);
   }
+  @media (min-width: 1440px) {
+    width: 60px;
+    height: 70px;
+  }
 }
 .icon-arrow-next {
+  @media (min-width: 768px) {
+    //display: inline;
+    width: 100%;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    fill: $color-white;
+  }
   @media (min-width: 1440px) {
     //display: inline;
     width: 60px;
     height: 70px;
-    margin: 0;
-    padding: 0;
-    fill: $color-white;
   }
 }
 
