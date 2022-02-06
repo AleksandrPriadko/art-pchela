@@ -2,51 +2,61 @@
     {
         "id": 1,
         "imgUrl": "https://i.ibb.co/WW06DDp/IMG-0958-3.jpg",
+        "smallImg": "https://i.ibb.co/Jqxrhqr/ppainting-wall-4-1x.jpg",
         "alt": ""
     },
     {
         "id": 2,
         "imgUrl": "https://i.ibb.co/rkZ2LsM/IMG-8216.jpg",
+        "smallImg": "https://i.ibb.co/mRGLd0s/ppainting-wall-5-1x.jpg",
         "alt": ""
     },
     {
         "id": 3,
         "imgUrl": "https://i.ibb.co/nzV7qCW/IMG-8286.jpg",
+        "smallImg": "https://i.ibb.co/6vBdcNj/ppainting-wall-6-1x.jpg",
         "alt":""
     },
     {
         "id": 4,
         "imgUrl": "https://i.ibb.co/nzV7qCW/IMG-8286.jpg",
+        "smallImg": "https://i.ibb.co/6vBdcNj/ppainting-wall-6-1x.jpg",
         "alt":""
     },
     {
         "id": 5,
         "imgUrl": "https://i.ibb.co/7VHQBjP/image.jpg",
+        "smallImg": "https://i.ibb.co/Fg0zL1d/ppainting-wall-7-1x.jpg",
         "alt": ""
     },
     {
         "id": 6,
         "imgUrl": "https://i.ibb.co/D17ZSCh/1.jpg",
+        "smallImg": "https://i.ibb.co/82tBTV8/ppainting-wall-8-1x.jpg",
         "alt": ""
     },
     {
         "id": 7,
         "imgUrl":"https://i.ibb.co/Ch5BgXX/2.jpg",
+        "smallImg": "https://i.ibb.co/qRnvP8r/ppainting-wall-1x.jpg",
         "alt": ""
     },
     {
         "id": 8,
         "imgUrl": "https://i.ibb.co/x7cktjZ/image.jpg",
+        "smallImg": "https://i.ibb.co/p1QT58X/ppainting-wall-2-1x.jpg",
         "alt": ""
     },
     {
         "id": 9,
         "imgUrl": "https://i.ibb.co/1nSQ9Bd/image.jpg",
+        "smallImg": "https://i.ibb.co/7v5YPt4/ppainting-wall-3-1x.jpg",
         "alt": ""
     },
     {
         "id": 10,
         "imgUrl": "https://i.ibb.co/1nSQ9Bd/image.jpg",
+        "smallImg": "https://i.ibb.co/7v5YPt4/ppainting-wall-3-1x.jpg",
         "alt": ""
     }
 ]

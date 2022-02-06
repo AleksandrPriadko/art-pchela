@@ -145,6 +145,8 @@
 }
 
 .block-portfolio__item {
+  position: relative;
+  transition: 250ms;
   @media (min-width: 768px) {
     display: block;
     width: 438px;
