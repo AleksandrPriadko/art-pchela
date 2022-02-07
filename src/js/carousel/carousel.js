@@ -3,10 +3,10 @@ import img from '../../portfolio.json';
 const blockPortfolio = document.querySelector('.block-portfolio');
 
 const listImgTop = document.createElement('ul');
-listImgTop.classList.add('block-portfolio__list-one', 'slider');
+listImgTop.classList.add('block-portfolio__list-one', 'js-active');
 
 const listImgBottom = document.createElement('ul');
-listImgBottom.classList.add('block-portfolio__list-two');
+listImgBottom.classList.add('block-portfolio__list-two', 'js-active');
 
 const prevBtn = document.querySelector('.btn-slider-prev');
 const nextBtn = document.querySelector('.btn-slider-next');

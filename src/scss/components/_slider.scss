@@ -1,0 +1,51 @@
+body.show-modal-slider .backdrop-slider {
+  pointer-events: initial;
+  opacity: 1;
+  visibility: visible;
+}
+body.show-modal-slider .btn-close {
+  //transform-origin: top right;
+  transform: rotate(0deg);
+}
+
+.backdrop-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250px ease-in-out, visibility 250px ease-in-out;
+}
+
+.modal-slider {
+  //position: relative;
+  width: 1280px;
+  height: auto;
+
+  background-color: $color-black;
+  border-radius: 10px;
+}
+
+.btn-close {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+
+  background-color: $color-yellow;
+  border-bottom-left-radius: 100%;
+
+  transform-origin: top right;
+  transform: rotate(-90deg);
+  transition: transform 300ms ease-in-out;
+}
