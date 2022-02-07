@@ -37,6 +37,12 @@
     },
     {
         "id": 7,
+        "imgUrl": "https://i.ibb.co/rkZ2LsM/IMG-8216.jpg",
+        "smallImg": "https://i.ibb.co/mRGLd0s/ppainting-wall-5-1x.jpg",
+        "alt": ""
+    },
+    {
+        "id": 7,
         "imgUrl":"https://i.ibb.co/Ch5BgXX/2.jpg",
         "smallImg": "https://i.ibb.co/qRnvP8r/ppainting-wall-1x.jpg",
         "alt": ""
@@ -57,6 +63,12 @@
         "id": 10,
         "imgUrl": "https://i.ibb.co/1nSQ9Bd/image.jpg",
         "smallImg": "https://i.ibb.co/7v5YPt4/ppainting-wall-3-1x.jpg",
+        "alt": ""
+    },
+    {
+        "id": 7,
+        "imgUrl":"https://i.ibb.co/Ch5BgXX/2.jpg",
+        "smallImg": "https://i.ibb.co/qRnvP8r/ppainting-wall-1x.jpg",
         "alt": ""
     }
 ]

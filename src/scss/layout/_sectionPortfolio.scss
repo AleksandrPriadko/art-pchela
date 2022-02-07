@@ -114,14 +114,14 @@
     margin-bottom: 10px;
 
     transform: translateX(-395px);
-    transition: transform 250ms ease-in-out;
+    transition: transform 500ms ease-in-out;
   }
   @media (min-width: 1440px) {
     height: 382px;
 
     margin-bottom: 15px;
 
-    transform: translateX(-574px);
+    transform: translateX(-1226px);
   }
 }
 .block-portfolio__list-two {
@@ -134,19 +134,19 @@
 
     //margin-bottom: 15px;
     transform: translateX(-178.5px);
-    transition: transform 250ms ease-in-out;
+    transition: transform 500ms ease-in-out;
   }
   @media (min-width: 1440px) {
     height: 382px;
 
     //margin-bottom: 15px;
-    transform: translateX(-240.5px);
+    transform: translateX(-892.5px);
   }
 }
 
 .block-portfolio__item {
   position: relative;
-  transition: 250ms;
+  //transition: position 250ms ease-in-out;
   @media (min-width: 768px) {
     display: block;
     width: 438px;
