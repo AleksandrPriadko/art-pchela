@@ -149,16 +149,16 @@
   //transition: position 250ms ease-in-out;
   @media (min-width: 768px) {
     display: block;
-    width: 438px;
-    height: 260px;
+    // width: 438px;
+    // height: 260px;
 
     margin-right: 10px;
 
     //object-fit: cover;
   }
   @media (min-width: 1440px) {
-    width: 637px;
-    height: 380px;
+    // width: 637px;
+    // height: 380px;
 
     margin-right: 15px;
 
@@ -168,10 +168,20 @@
 .block-portfolio__link {
   @media (min-width: 768px) {
     display: block;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
+    width: 438px;
+    height: 260px;
     //width: 637px;
     //height: 380px;
+    object-fit: cover;
+  }
+  @media (min-width: 1440px) {
+    display: block;
+    // width: 100%;
+    // height: 100%;
+    width: 637px;
+    height: 380px;
     object-fit: cover;
   }
 }

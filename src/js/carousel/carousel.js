@@ -1,15 +1,14 @@
 //import Swiper from 'swiper';
 import img from '../../portfolio.json';
+
 const blockPortfolio = document.querySelector('.block-portfolio');
-
 const listImgTop = document.createElement('ul');
-listImgTop.classList.add('block-portfolio__list-one', 'js-active');
-
 const listImgBottom = document.createElement('ul');
-listImgBottom.classList.add('block-portfolio__list-two', 'js-active');
-
 const prevBtn = document.querySelector('.btn-slider-prev');
 const nextBtn = document.querySelector('.btn-slider-next');
+
+listImgTop.classList.add('block-portfolio__list-one', 'js-active');
+listImgBottom.classList.add('block-portfolio__list-two', 'js-active');
 
 let halfArray = img.length / 2;
 const arrayImgFirst = img.slice(0, halfArray);
@@ -18,6 +17,7 @@ const arrayImgSecond = img.slice(halfArray);
 const arrayItemsImgTop = arrayImgFirst.map(({ smallImg, alt }) => {
   return createImgCardTop(smallImg, alt);
 });
+console.dir(arrayItemsImgTop);
 const arrayItemsImgBottom = arrayImgSecond.map(({ smallImg, alt }) => {
   return createImgCardBottom(smallImg, alt);
 });
@@ -52,12 +52,23 @@ function createImgCardBottom(imgUrl, alt) {
 }
 
 let direction = true;
-let width = 652;
+let width = arrayItemsImgTop[0].offsetWidth + 15;
+console.log(width);
 // // buttons
 nextBtn.addEventListener('click', onClickImgNext);
 prevBtn.addEventListener('click', onClickImgPrev);
+listImgTop.addEventListener('transitionend', onMoveTransitionSlider);
 
-listImgTop.addEventListener('transitionend', function () {
+function onClickImgNext() {
+  direction = true;
+  return onMoveList(direction);
+}
+
+function onClickImgPrev() {
+  direction = false;
+  return onMoveList(direction);
+}
+function onMoveTransitionSlider() {
   onSliderMove(direction);
 
   listImgTop.style.transition = 'none';
@@ -68,18 +79,8 @@ listImgTop.addEventListener('transitionend', function () {
     listImgTop.style.transition = 'transform 0.5s ease-in-out';
     listImgBottom.style.transition = 'transform 0.5s ease-in-out';
   }, 0);
-});
-
-function onClickImgNext() {
-  direction = true;
-  return onMoveList();
 }
-
-function onClickImgPrev() {
-  direction = false;
-  return onMoveList();
-}
-function onMoveList() {
+function onMoveList(direction) {
   listImgTop.style.transform = `translateX(${
     direction ? -1226 - width : -1226 + width
   }px)`;
