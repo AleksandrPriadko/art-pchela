@@ -67,8 +67,8 @@
   @media (max-width: 767px) {
     left: -30px;
 
-    flex-direction: row;
-    flex-wrap: wrap;
+    // flex-direction: row;
+    // flex-wrap: wrap;
     width: 375px;
     overflow: hidden;
     //box-shadow: 50px 0px 26px -15px rgba(0, 0, 0, 1) inset;
@@ -104,7 +104,21 @@
   }
 }
 
+.block-portfolio__list {
+  @media (max-width: 767px) {
+    display: flex;
+    transform: translateX(-770px);
+    transition: transform 500ms ease-in-out;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
 .block-portfolio__list-one {
+  @media (max-width: 767px) {
+    display: none;
+  }
   @media (min-width: 768px) {
     display: flex;
     //flex-wrap: wrap;
@@ -114,7 +128,7 @@
 
     margin-bottom: 10px;
 
-    transform: translateX(-395px);
+    transform: translateX(-843px);
     transition: transform 500ms ease-in-out;
   }
   @media (min-width: 1440px) {
@@ -126,6 +140,9 @@
   }
 }
 .block-portfolio__list-two {
+  @media (max-width: 767px) {
+    display: none;
+  }
   @media (min-width: 768px) {
     display: flex;
     //flex-wrap: wrap;
@@ -134,7 +151,7 @@
     height: 260px;
 
     //margin-bottom: 15px;
-    transform: translateX(-178.5px);
+    transform: translateX(-616.5px);
     transition: transform 500ms ease-in-out;
   }
   @media (min-width: 1440px) {
@@ -148,6 +165,10 @@
 .block-portfolio__item {
   position: relative;
   //transition: position 250ms ease-in-out;
+  @media (max-width: 767px) {
+    display: block;
+    margin-right: 10px;
+  }
   @media (min-width: 768px) {
     display: block;
     // width: 438px;
@@ -167,6 +188,11 @@
   }
 }
 .block-portfolio__link {
+  @media (max-width: 767px) {
+    width: 375px;
+    height: 500px;
+    object-fit: cover;
+  }
   @media (min-width: 768px) {
     display: block;
     // width: 100%;
@@ -189,12 +215,20 @@
 
 .btn-slider-next,
 .btn-slider-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 600;
+  @media (max-width: 767px) {
+    width: 80px;
+    height: 80px;
+    padding: 0px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(11, 10, 10, 0.7);
+  }
   @media (min-width: 768px) {
-    position: absolute;
-    z-index: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 80px;
     height: 80px;
     padding: 0px;

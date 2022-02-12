@@ -52,54 +52,67 @@ function createImgCardBottom(imgUrl, alt) {
 }
 
 let direction = true;
-let width = arrayItemsImgTop[0].offsetWidth + 15;
-console.log(width);
+let widthImg = arrayItemsImgTop[0].offsetWidth;
+let offsetsTop = 0;
+let offsetsBottom = 0;
+let step = widthImg + (widthImg < 637 ? 10 : 15);
+let innerWidth = window.innerWidth;
+console.log(`innerWidth: `, innerWidth);
+
+if (widthImg === 637) {
+  offsetsTop = 1226;
+  offsetsBottom = 892.5;
+} else if (widthImg === 438) {
+  offsetsTop = 843;
+  offsetsBottom = 616.5;
+}
 // // buttons
-nextBtn.addEventListener('click', onClickImgNext);
-prevBtn.addEventListener('click', onClickImgPrev);
-listImgTop.addEventListener('transitionend', onMoveTransitionSlider);
+if (innerWidth >= 768) {
+  nextBtn.addEventListener('click', onClickImgNext);
+  prevBtn.addEventListener('click', onClickImgPrev);
+  listImgTop.addEventListener('transitionend', onMoveTransitionSlider);
+}
 
 function onClickImgNext() {
   direction = true;
-  return onMoveList(direction);
+  return onMoveList(direction, step, offsetsTop, offsetsBottom);
 }
 
 function onClickImgPrev() {
   direction = false;
-  return onMoveList(direction);
+  return onMoveList(direction, step, offsetsTop, offsetsBottom);
 }
 function onMoveTransitionSlider() {
   onSliderMove(direction);
 
   listImgTop.style.transition = 'none';
-  listImgTop.style.transform = 'translate(-1226px)';
+  listImgTop.style.transform = `translate(-${offsetsTop}px)`;
   listImgBottom.style.transition = 'none';
-  listImgBottom.style.transform = 'translate(-892.5px)';
+  listImgBottom.style.transform = `translate(-${offsetsBottom}px)`;
   setTimeout(() => {
     listImgTop.style.transition = 'transform 0.5s ease-in-out';
     listImgBottom.style.transition = 'transform 0.5s ease-in-out';
   }, 0);
 }
-function onMoveList(direction) {
+function onMoveList(dir, step, Top, Bottom) {
   listImgTop.style.transform = `translateX(${
-    direction ? -1226 - width : -1226 + width
+    dir ? -Top - step : -Top + step
   }px)`;
   listImgBottom.style.transform = `translateX(${
-    direction ? -892.5 - width : -892.5 + width
+    dir ? -Bottom - step : -Bottom + step
   }px)`;
+  return;
 }
 
-function onSliderMove(direction) {
-  let deleteIndTop = direction
-    ? arrayItemsImgTop.shift()
-    : arrayItemsImgTop.pop();
-  let deleteIndBottom = direction
+function onSliderMove(dir) {
+  let deleteIndTop = dir ? arrayItemsImgTop.shift() : arrayItemsImgTop.pop();
+  let deleteIndBottom = dir
     ? arrayItemsImgBottom.shift()
     : arrayItemsImgBottom.pop();
-  direction
+  dir
     ? arrayItemsImgTop.push(deleteIndTop)
     : arrayItemsImgTop.unshift(deleteIndTop);
-  direction
+  dir
     ? arrayItemsImgBottom.push(deleteIndBottom)
     : arrayItemsImgBottom.unshift(deleteIndBottom);
 
