@@ -1,39 +1,46 @@
 import imgArray from '../../portfolio.json';
 const modalSlider = document.querySelector('.backdrop-slider');
 const listImg = document.querySelector('.block-portfolio__list-one');
-const modalImg = document.querySelector('.modal-slider');
+const listSlider = document.querySelector('.list-slider');
+console.log(listSlider);
 const closeBtn = document.querySelector('.btn-close');
-
-const img = document.createElement('img');
+const btnNextImg = document.querySelector('.js-btn-next-img');
+const btnPrevImg = document.querySelector('.js-btn-prev-img');
 
 listImg.addEventListener('click', handleImgClick);
-closeBtn.addEventListener('click', () => {
-  // setTimeout(() => {
-  //   document.body.classList.remove('show-modal-slider');
-  //   //closeBtn.style.transform = 'rotate(90deg)';
-  // }, 350);
-  document.body.classList.remove('show-modal-slider');
-});
+closeBtn.addEventListener('click', () =>
+  document.body.classList.remove('show-modal-slider'),
+);
 
 function handleImgClick(event) {
   event.preventDefault();
   const target = event.target;
-  console.log(imgArray.imgUrl.indexOf(target.src));
+  //console.log(imgArray.imgUrl.indexOf(target.src));
   if (target.nodeName !== 'IMG') {
     return;
   }
   const largeImgUrl = target.src;
-  console.log(largeImgUrl);
-  return currentImage(largeImgUrl);
+  const find = imgArray.find(url => url.smallImg === largeImgUrl);
+  let indexImg = imgArray.indexOf(find);
+  console.log(indexImg);
+  return currentImage(indexImg);
 }
 
-function currentImage(urlImg) {
+function currentImage(index) {
   document.body.classList.add('show-modal-slider');
-  imgArray.map(images => {
-    img.setAttribute('src', urlImg);
+  const itemsGalleryArr = imgArray.map(image => {
+    const item = document.createElement('li');
+    item.classList.add('item-gallery');
+    const img = document.createElement('img');
+    img.setAttribute('src', image.smallImg);
     img.classList.add('img-slider');
-    modalImg.appendChild(img);
+    console.log(img);
+    console.log(item);
+    item.append(img);
+    return item;
   });
+  console.log(itemsGalleryArr);
+  return listSlider.append(...itemsGalleryArr);
 }
 //modalImg.appendChild(closeBtn);
 //modalSlider.append(modalImg);

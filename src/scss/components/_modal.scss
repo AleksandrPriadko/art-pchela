@@ -1,5 +1,5 @@
 @media screen and (max-width: 767px) {
-  body.show-modal .backdrop {
+  body.show-modal .backdrop-menu {
     pointer-events: initial;
     opacity: 1;
     visibility: visible;
@@ -14,20 +14,11 @@
     padding-left: 124px;
   }
 
-  .backdrop {
+  .backdrop-menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    z-index: 998;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
     transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
   }
 
@@ -64,7 +55,7 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .backdrop {
+  .backdrop-menu {
     display: none;
     // justify-content: center;
     // align-items: center;

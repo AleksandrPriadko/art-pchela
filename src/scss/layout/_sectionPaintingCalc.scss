@@ -158,6 +158,9 @@
     width: 640px;
   }
 }
+.data-input::placeholder {
+  color: $color-white;
+}
 .sketch {
   @include font($fontRoboto, normal, $color-white);
 

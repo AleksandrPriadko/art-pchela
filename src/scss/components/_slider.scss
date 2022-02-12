@@ -11,41 +11,41 @@ body.show-modal-slider .btn-close {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 900;
+
   backdrop-filter: blur(3px);
   background-color: rgba($color: #000000, $alpha: 0.7);
 
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
   transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
 }
 
 .modal-slider {
-  //position: relative;
-  // width: 1280px;
-  // height: auto;
-
-  background-color: $color-black;
-  border-radius: 10px;
+  position: relative;
+}
+.block-slider {
+  width: 1280px;
+  overflow: hidden;
+}
+.list-slider {
+  display: flex;
+  align-items: center;
+}
+.item-gallery {
+  width: 100%;
+  height: 100%;
 }
 .img-slider {
-  width: 100%;
   max-width: 1280px;
-  height: 100%;
+  object-fit: contain;
 }
 
 .btn-close {
+  display: flex;
+  //align-items: center;
   width: 100px;
   height: 100px;
   position: absolute;
   top: 0px;
-  right: 20px;
+  right: 0px;
 
   background-color: rgba($color: $color-yellow, $alpha: 0.4);
   border-bottom-left-radius: 100%;
@@ -58,4 +58,64 @@ body.show-modal-slider .btn-close {
 .btn-close:hover {
   background-color: $color-yellow;
   transition: all 250ms ease-in-out;
+}
+
+.icon-close-gallery {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+  transform: scale(1);
+  transition: transform 250ms ease-in-out;
+  &::before,
+  &::after {
+    display: block;
+    content: '';
+    width: 40px;
+    height: 4px;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    border-radius: 4px;
+    background-color: #000000;
+    margin: 0;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.btn-close:hover .icon-close-gallery {
+  transform: scale(1.2);
+}
+
+.btn-next-img,
+.btn-prev-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(50% - 40px);
+}
+.btn-next-img {
+  right: -80px;
+}
+.btn-prev-img {
+  left: -80px;
+}
+.icon-next-img,
+.icon-prev-img {
+  width: 80px;
+  height: 80px;
+  fill: white;
+  margin: 0;
+  padding: 0;
+}
+.icon-prev-img {
+  transform: rotate(180deg);
 }
