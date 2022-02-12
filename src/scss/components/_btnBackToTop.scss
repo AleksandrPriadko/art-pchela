@@ -1,17 +1,25 @@
 .btn-back-top {
   position: fixed;
-  right: 40px;
-  bottom: 40px;
+  right: 20px;
+  bottom: 20px;
   z-index: 900;
   display: none;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  background-color: rgba($color: $color-black, $alpha: 0.6);
+  border-radius: 50%;
+  @media (max-width: 767px) {
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 0px 10px 5px rgba(238, 255, 0, 0.5);
+  }
   @media (min-width: 768px) {
-    width: 50px;
-    height: 50px;
-    background-color: rgba($color: $color-black, $alpha: 0.6);
-    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    right: 40px;
+    bottom: 40px;
     box-shadow: 0px 0px 10px 5px rgba(238, 255, 0, 0.5);
   }
   @media (min-width: 1440px) {
@@ -23,9 +31,9 @@
 .btn-back-top:hover,
 .btn-back-top:active {
   background-color: $color-black;
-  @media (min-width: 768px) {
-    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
-  }
+
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+
   @media (min-width: 1440px) {
     box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
   }
@@ -39,13 +47,16 @@
   display: flex;
 }
 .icon-arrow-top {
+  border-radius: 50%;
+  fill: $color-yellow;
+  transform: rotate(-90deg);
+  @media (max-width: 767px) {
+    width: 45px;
+    height: 45px;
+  }
   @media (min-width: 768px) {
-    display: block;
-    width: 100%;
-    height: 30px;
-    fill: $color-yellow;
-    transform: rotate(-90deg);
-    border-radius: 50%;
+    width: 55px;
+    height: 55px;
   }
   @media (min-width: 1440px) {
     width: 100%;
