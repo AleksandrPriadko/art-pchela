@@ -33,7 +33,7 @@ let widthImg = arrayItemsImg[0].offsetWidth;
 let offsets = 770;
 let step = widthImg + 10;
 let winWidth = window.innerWidth;
-console.log(winWidth);
+
 // // buttons
 if (winWidth <= 767) {
   nextBtn.addEventListener('click', onClickImgNext);

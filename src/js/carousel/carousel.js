@@ -17,7 +17,7 @@ const arrayImgSecond = img.slice(halfArray);
 const arrayItemsImgTop = arrayImgFirst.map(({ smallImg, alt }) => {
   return createImgCardTop(smallImg, alt);
 });
-console.dir(arrayItemsImgTop);
+
 const arrayItemsImgBottom = arrayImgSecond.map(({ smallImg, alt }) => {
   return createImgCardBottom(smallImg, alt);
 });
@@ -57,7 +57,6 @@ let offsetsTop = 0;
 let offsetsBottom = 0;
 let step = widthImg + (widthImg < 637 ? 10 : 15);
 let innerWidth = window.innerWidth;
-console.log(`innerWidth: `, innerWidth);
 
 if (widthImg === 637) {
   offsetsTop = 1226;
@@ -119,3 +118,4 @@ function onSliderMove(dir) {
   listImgTop.append(...arrayItemsImgTop);
   listImgBottom.append(...arrayItemsImgBottom);
 }
+
