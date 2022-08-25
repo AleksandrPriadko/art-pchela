@@ -1,9 +1,8 @@
 import imgArray from '../../portfolio.json';
 const modalSlider = document.querySelector('.backdrop-slider');
-const listImg = document.querySelector('.block-portfolio__list-one');
-
+const topListImg = document.querySelector('.block-portfolio__list-one');
+const bottomListImg = document.querySelector('.block-portfolio__list-two');
 const listSlider = document.querySelector('.list-slider');
-
 const closeBtn = document.querySelector('.btn-close');
 const btnNextImg = document.querySelector('.js-btn-next-img');
 const btnPrevImg = document.querySelector('.js-btn-prev-img');
@@ -14,7 +13,8 @@ item.classList.add('item-gallery');
 const img = document.createElement('img');
 img.classList.add('img-slider');
 
-listImg.addEventListener('click', handleImgClick);
+topListImg.addEventListener('click', handleImgClick);
+bottomListImg.addEventListener('click', handleImgClick);
 closeBtn.addEventListener('click', closeSlider);
 
 btnNextImg.addEventListener('click', event => {
@@ -55,10 +55,10 @@ function changePicture(event, dir) {
     if (indexImg > 0) {
       indexImg--;
     } else {
-      indexImg = imgArray.length / 2 - 1;
+      indexImg = imgArray.length - 1;
     }
   } else if (dir === 'right') {
-    if (indexImg < imgArray.length / 2 - 1) {
+    if (indexImg < imgArray.length - 1) {
       indexImg++;
     } else {
       indexImg = 0;
