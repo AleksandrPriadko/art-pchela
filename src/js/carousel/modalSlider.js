@@ -8,6 +8,7 @@ const closeBtn = document.querySelector('.btn-close');
 const btnNextImg = document.querySelector('.js-btn-next-img');
 const btnPrevImg = document.querySelector('.js-btn-prev-img');
 
+let indexImg;
 const item = document.createElement('li');
 item.classList.add('item-gallery');
 const img = document.createElement('img');
@@ -15,6 +16,13 @@ img.classList.add('img-slider');
 
 listImg.addEventListener('click', handleImgClick);
 closeBtn.addEventListener('click', closeSlider);
+
+btnNextImg.addEventListener('click', event => {
+  changePicture(event, 'right');
+});
+btnPrevImg.addEventListener('click', event => {
+  changePicture(event, 'left');
+});
 
 function handleImgClick(event) {
   event.preventDefault();
@@ -24,7 +32,7 @@ function handleImgClick(event) {
   }
   const largeImgUrl = target.src;
   const find = imgArray.find(url => url.smallImg === largeImgUrl);
-  let indexImg = imgArray.indexOf(find);
+  indexImg = imgArray.indexOf(find);
 
   img.setAttribute('src', imgArray[indexImg].smallImg);
   item.append(img);
@@ -32,9 +40,31 @@ function handleImgClick(event) {
 
   return document.body.classList.add('show-modal-slider');
 }
+
 function closeSlider() {
   item.remove();
   document.body.classList.remove('show-modal-slider');
 
+  return;
+}
+
+function changePicture(event, dir) {
+  event.preventDefault();
+
+  if (dir === 'left') {
+    if (indexImg > 0) {
+      indexImg--;
+    } else {
+      indexImg = imgArray.length / 2 - 1;
+    }
+  } else if (dir === 'right') {
+    if (indexImg < imgArray.length / 2 - 1) {
+      indexImg++;
+    } else {
+      indexImg = 0;
+    }
+  }
+  img.setAttribute('src', imgArray[indexImg].smallImg);
+  item.replaceWith(img);
   return;
 }
