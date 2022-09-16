@@ -14,6 +14,18 @@ let halfArray = img.length / 2;
 const arrayImgFirst = img.slice(0, halfArray);
 const arrayImgSecond = img.slice(halfArray);
 
+blockPortfolio.addEventListener('mouseover', showBtn);
+blockPortfolio.addEventListener('mouseout', removeBtn);
+
+function showBtn() {
+  prevBtn.style.opacity = '1';
+  nextBtn.style.opacity = '1';
+}
+function removeBtn() {
+  prevBtn.style.opacity = '0';
+  nextBtn.style.opacity = '0';
+}
+
 const arrayItemsImgTop = arrayImgFirst.map(({ smallImg, alt }) => {
   return createImgCardTop(smallImg, alt);
 });
@@ -118,4 +130,3 @@ function onSliderMove(dir) {
   listImgTop.append(...arrayItemsImgTop);
   listImgBottom.append(...arrayItemsImgBottom);
 }
-
