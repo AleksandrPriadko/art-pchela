@@ -34,6 +34,7 @@
   }
 }
 .blockCalc {
+  overflow: hidden;
   @media screen and (max-width: 767px) {
     display: flex;
     position: relative;
@@ -56,6 +57,9 @@
 .text-iwp {
   @include font($fontAvangard, normal, $color-black);
   text-transform: uppercase;
+  transform: translateX(-100%);
+  opacity: 0;
+  //transition: opacity 300ms ease-in-out, transform 400ms ease-in-out;
   @media screen and (max-width: 767px) {
     display: block;
     font-size: 70px;
@@ -77,6 +81,11 @@
   }
 }
 
+.active {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: opacity 300ms ease-in-out, transform 400ms ease-in-out;
+}
 .text-painter-wall {
   @media screen and (max-width: 767px) {
     display: flex;
