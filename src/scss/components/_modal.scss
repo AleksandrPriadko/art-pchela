@@ -61,3 +61,60 @@
     // align-items: center;
   }
 }
+body.show-modal .backdropPaintCalc {
+  pointer-events: initial;
+  opacity: 1;
+  visibility: visible;
+}
+body.show-modal .modal-paintCalc {
+  transform: translateY(0%);
+}
+.modal-paintCalc {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // position: absolute;
+    // top: 0px;
+    // z-index: 9;
+    width: auto;
+
+    padding: 50px;
+
+    background-color: $color-black;
+    transform: translateY(-100%);
+    transition: transform 250ms ease-in-out;
+  }
+}
+
+.backdropPaintCalc {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+  }
+}
+
+.btnClosePaintCalc {
+  @media screen and (min-width: 1440px) {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0px;
+    border: 0px;
+    width: 32px;
+    height: 32px;
+    background-color: rgba($color: #000000, $alpha: 0);
+  }
+}
+.iconClosePaintCalc {
+  @media screen and (min-width: 1440px) {
+    width: 32px;
+    height: 32px;
+    fill: $color-white;
+  }
+}

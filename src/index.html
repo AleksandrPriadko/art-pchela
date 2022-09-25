@@ -59,7 +59,9 @@
             <p><span>Интерьерная роспись стен</span></p>
           </div>
           <div class="block-btn-calc">
-            <a href="#paintingCalc" class="btn-calc">просчитать роспись</a>
+            <button href="#paintingCalc" class="btn-calc btnCalc-js">
+              просчитать роспись
+            </button>
           </div>
           <picture>
             <source
@@ -550,50 +552,59 @@
       </div>
     </div>
     <!--Modal window calculate painting wall-->
-    <div>
-      <h2 class="paintingCalc-heading" id="paintingCalc">просчитать роспись</h2>
-      <form class="formCalc" action="" autocomplete="on">
-        <label class="blockInput" for="user_name">
-          <span class="inputName">имя</span
-          ><input
-            class="data-input"
-            type="text"
-            name="username"
-            placeholder="Александр"
-            id="user_name"
-            minlength="2"
-            maxlength="26"
-            pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-            required
-          />
-        </label>
-        <label class="blockInput" for="phone_number"
-          ><span class="inputName">номер телефона</span
-          ><input
-            class="data-input"
-            type="tel"
-            name="phone-number"
-            id="phone_number"
-            required
-            data-number="number"
-        /></label>
-        <label class="blockInput" for="wall_size">
-          <span class="inputName">размер стены</span>
-          <input
-            class="data-input"
-            type="text"
-            name="wall-size"
-            id="wall_size"
-            required
-            placeholder="ширина 200см высота 180см"
-          />
-        </label>
-        <p class="sketch">эскиз росписи</p>
-        <button class="btn-louder-files">
-          загрузите изображение, которое хотели бы просчитать
+    <div class="backdrop backdropPaintCalc">
+      <div class="modal-paintCalc">
+        <button class="btnClosePaintCalc btnClosePaintCalc-js" type="button">
+          <svg class="iconClosePaintCalc">
+            <use href="./images/sprite-icons.svg#icon-close"></use>
+          </svg>
         </button>
-        <button class="btn-submit" type="submit">отправить</button>
-      </form>
+        <h2 class="paintingCalc-heading" id="paintingCalc">
+          просчитать роспись
+        </h2>
+        <form class="formCalc" action="" autocomplete="on">
+          <label class="blockInput" for="user_name">
+            <span class="inputName">имя</span
+            ><input
+              class="data-input"
+              type="text"
+              name="username"
+              placeholder="Александр"
+              id="user_name"
+              minlength="2"
+              maxlength="26"
+              pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+              required
+            />
+          </label>
+          <label class="blockInput" for="phone_number"
+            ><span class="inputName">номер телефона</span
+            ><input
+              class="data-input"
+              type="tel"
+              name="phone-number"
+              id="phone_number"
+              required
+              data-number="number"
+          /></label>
+          <label class="blockInput" for="wall_size">
+            <span class="inputName">размер стены</span>
+            <input
+              class="data-input"
+              type="text"
+              name="wall-size"
+              id="wall_size"
+              required
+              placeholder="ширина 200см высота 180см"
+            />
+          </label>
+          <p class="sketch">эскиз росписи</p>
+          <button class="btn-louder-files">
+            загрузите изображение, которое хотели бы просчитать
+          </button>
+          <button class="btn-submit" type="submit">отправить</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

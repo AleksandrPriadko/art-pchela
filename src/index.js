@@ -7,3 +7,4 @@ import './js/btnBackUp';
 import './js/carousel/modalSlider';
 import './js/carousel/sliderMobile';
 import './js/animation/animation';
+import './js/modal window/modalPaintingCalculate';
