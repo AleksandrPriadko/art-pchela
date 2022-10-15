@@ -1,29 +1,29 @@
 //import Swiper from 'swiper';
-import img from '../../portfolio.json';
+import img from "../../portfolio.json";
 
-const blockPortfolio = document.querySelector('.block-portfolio');
-const listImgTop = document.createElement('ul');
-const listImgBottom = document.createElement('ul');
-const prevBtn = document.querySelector('.btn-slider-prev');
-const nextBtn = document.querySelector('.btn-slider-next');
+const blockPortfolio = document.querySelector(".block-portfolio");
+const listImgTop = document.createElement("ul");
+const listImgBottom = document.createElement("ul");
+const prevBtn = document.querySelector(".btn-slider-prev");
+const nextBtn = document.querySelector(".btn-slider-next");
 
-listImgTop.classList.add('block-portfolio__list-one', 'js-active');
-listImgBottom.classList.add('block-portfolio__list-two', 'js-active');
+listImgTop.classList.add("block-portfolio__list-one", "js-active");
+listImgBottom.classList.add("block-portfolio__list-two", "js-active");
 
 let halfArray = img.length / 2;
 const arrayImgFirst = img.slice(0, halfArray);
 const arrayImgSecond = img.slice(halfArray);
 
-blockPortfolio.addEventListener('mouseover', showBtn);
-blockPortfolio.addEventListener('mouseout', removeBtn);
+blockPortfolio.addEventListener("mouseover", showBtn);
+blockPortfolio.addEventListener("mouseout", removeBtn);
 
 function showBtn() {
-  prevBtn.style.opacity = '1';
-  nextBtn.style.opacity = '1';
+  prevBtn.style.opacity = "1";
+  nextBtn.style.opacity = "1";
 }
 function removeBtn() {
-  prevBtn.style.opacity = '0';
-  nextBtn.style.opacity = '0';
+  prevBtn.style.opacity = "0";
+  nextBtn.style.opacity = "0";
 }
 
 const arrayItemsImgTop = arrayImgFirst.map(({ smallImg, alt }) => {
@@ -39,25 +39,25 @@ listImgBottom.append(...arrayItemsImgBottom);
 blockPortfolio.prepend(listImgTop, listImgBottom);
 
 function createImgCardTop(img, alt) {
-  const item = document.createElement('li');
-  item.classList.add('block-portfolio__item', 'js-item-slide-top');
+  const item = document.createElement("li");
+  item.classList.add("block-portfolio__item", "js-item-slide-top");
 
-  const images = document.createElement('img');
-  images.classList.add('block-portfolio__link');
-  images.setAttribute('src', img);
-  images.setAttribute('alt', alt);
+  const images = document.createElement("img");
+  images.classList.add("block-portfolio__link");
+  images.setAttribute("src", img);
+  images.setAttribute("alt", alt);
   item.appendChild(images);
 
   return item;
 }
 function createImgCardBottom(imgUrl, alt) {
-  const item = document.createElement('li');
-  item.classList.add('block-portfolio__item', 'js-item-slide-bottom');
+  const item = document.createElement("li");
+  item.classList.add("block-portfolio__item", "js-item-slide-bottom");
 
-  const images = document.createElement('img');
-  images.classList.add('block-portfolio__link');
-  images.setAttribute('src', imgUrl);
-  images.setAttribute('alt', alt);
+  const images = document.createElement("img");
+  images.classList.add("block-portfolio__link");
+  images.setAttribute("src", imgUrl);
+  images.setAttribute("alt", alt);
   item.appendChild(images);
 
   return item;
@@ -79,9 +79,9 @@ if (widthImg === 637) {
 }
 // // buttons
 if (innerWidth >= 768) {
-  nextBtn.addEventListener('click', onClickImgNext);
-  prevBtn.addEventListener('click', onClickImgPrev);
-  listImgTop.addEventListener('transitionend', onMoveTransitionSlider);
+  nextBtn.addEventListener("click", onClickImgNext);
+  prevBtn.addEventListener("click", onClickImgPrev);
+  listImgTop.addEventListener("transitionend", onMoveTransitionSlider);
 }
 
 function onClickImgNext() {
@@ -96,13 +96,13 @@ function onClickImgPrev() {
 function onMoveTransitionSlider() {
   onSliderMove(direction);
 
-  listImgTop.style.transition = 'none';
+  listImgTop.style.transition = "none";
   listImgTop.style.transform = `translate(-${offsetsTop}px)`;
-  listImgBottom.style.transition = 'none';
+  listImgBottom.style.transition = "none";
   listImgBottom.style.transform = `translate(-${offsetsBottom}px)`;
   setTimeout(() => {
-    listImgTop.style.transition = 'transform 0.5s ease-in-out';
-    listImgBottom.style.transition = 'transform 0.5s ease-in-out';
+    listImgTop.style.transition = "transform 0.5s ease-in-out";
+    listImgBottom.style.transition = "transform 0.5s ease-in-out";
   }, 0);
 }
 function onMoveList(dir, step, Top, Bottom) {

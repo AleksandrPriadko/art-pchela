@@ -23,7 +23,7 @@
               data-action="open-modal"
               data-menu="close-modal"
             >
-              <div class="line-menu"></div>
+              <span class="line-menu"></span>
             </button>
             <img class="logoArt" src="./images/artpchela_logo.svg" alt="" />
             <a href="tel:+380660069285" class="iconMenu">
@@ -59,31 +59,17 @@
             <p><span>Интерьерная роспись стен</span></p>
           </div>
           <div class="block-btn-calc">
-            <button href="#paintingCalc" class="btn-calc btnCalc-js">
-              просчитать роспись
-            </button>
+            <button type="button" class="btn-calc btnCalc-js">просчитать роспись</button>
           </div>
           <picture>
+            <source media="(max-width: 767px)" srcset="images/girls-375.png" type="image/png" />
             <source
-              srcset="./images/girls-375.png"
-              media="(max-width: 767px)"
-            />
-            <source
-              srcset="
-                ./images/girls-517@1x.png 1x,
-                ./images/girls-517@2x.png 2x
-              "
               media="(min-width: 1440px)"
+              srcset="images/girlsDesktop@1x.png 1x, images/girlsDesktop@2x.png 2x"
+              type="image/png"
             />
-            <source
-              srcset="./images/girls-768.png"
-              media="(min-width: 768px)"
-            />
-            <img
-              src="./images/girls-375.png"
-              alt="art girl"
-              class="img-girls"
-            />
+            <source media="(min-width: 768px)" srcset="./images/girls-768.png" type="image/png" />
+            <img src="images/girls-375.png" alt="art girl" class="img-girls" />
           </picture>
         </div>
       </div>
@@ -94,28 +80,24 @@
           <h2 class="about-heading" id="about">О нас</h2>
           <div class="about-heading__underline"></div>
           <p class="serviceOffer">
-            <b>Красиво жить не запретишь</b> – фраза, известная всем! А ведь
-            красоту можно создать во всем и всегда! Мы предлагаем Вам внести
-            ноты изыска, моды, стиля и, самое главное, красоты, в Ваши дом, офис
-            или дачу!
+            <b>Красиво жить не запретишь</b> – фраза, известная всем! А ведь красоту можно создать
+            во всем и всегда! Мы предлагаем Вам внести ноты изыска, моды, стиля и, самое главное,
+            красоты, в Ваши дом, офис или дачу!
           </p>
           <p class="serviceOffer serviceOfferNone">
-            Художественная студия ART pchela предлагает эксклюзивное оформление
-            интерьеров любой площади!
+            Художественная студия ART pchela предлагает эксклюзивное оформление интерьеров любой
+            площади!
           </p>
           <p class="serviceOffer serviceOfferNone">
-            Для квартиры или коттеджа, кафе или ресторана, гостиницы или клуба
-            художники с радостью разработают уникальный эскиз, который не только
-            подчеркнет престижный статус, но сделает его современным и уютным,
-            где каждая деталь будет радовать глаз.
+            Для квартиры или коттеджа, кафе или ресторана, гостиницы или клуба художники с радостью
+            разработают уникальный эскиз, который не только подчеркнет престижный статус, но сделает
+            его современным и уютным, где каждая деталь будет радовать глаз.
           </p>
           <p class="serviceOffer-laptop">
-            Художественная студия ART pchela предлагает эксклюзивное оформление
-            интерьеров любой площади! Для квартиры или коттеджа, кафе или
-            ресторана, гостиницы или клуба художники с радостью разработают
-            уникальный эскиз, который не только подчеркнет престижный статус, но
-            сделает его современным и уютным, где каждая деталь будет радовать
-            глаз.
+            Художественная студия ART pchela предлагает эксклюзивное оформление интерьеров любой
+            площади! Для квартиры или коттеджа, кафе или ресторана, гостиницы или клуба художники с
+            радостью разработают уникальный эскиз, который не только подчеркнет престижный статус,
+            но сделает его современным и уютным, где каждая деталь будет радовать глаз.
           </p>
         </div>
         <div class="jobExperience">
@@ -134,9 +116,7 @@
             <span class="amountPain-more">более</span>
             <span class="amountPain-number">150</span>
             <div class="amountPain--underline"></div>
-            <span class="amountPain-text"
-              >литров краски использовано в работе</span
-            >
+            <span class="amountPain-text">литров краски использовано в работе</span>
           </div>
         </div>
       </div>
@@ -166,36 +146,29 @@
           <h2 class="priceHeading" id="price">цена</h2>
           <div class="priceHeading-underline"></div>
           <p class="priceHeading-text">
-            Цена зависит от детализации эскиза, сложность прорисовки, передача
-            света и тени для более реалистичного и объемного изображения.
+            Цена зависит от детализации эскиза, сложность прорисовки, передача света и тени для
+            более реалистичного и объемного изображения.
           </p>
         </div>
         <ul class="priceList">
           <li class="priceList-items">
             <picture>
               <source
-                srcset="./images/price/background-315.jpg"
                 media="(max-width: 767px)"
+                type="image/png"
+                srcset="images/price/background315.jpg"
               />
               <source
-                srcset="
-                  ./images/price/background-312@1.png  1x,
-                  ./images/price/background-312@2x.png 2x
-                "
                 media="(min-width: 1440px)"
+                type="image/png"
+                srcset="images/price/background3121x.png 1x, images/price/background3122x.png 2x"
               />
               <source
-                srcset="
-                  ./images/price/background-216@1.png 1x,
-                  ./images/price/background-216@2.png 2x
-                "
                 media="(min-width: 768px)"
+                type="image/png"
+                srcset="images/price/background216@1.png 1x, images/price/background2162x.png 2x"
               />
-              <img
-                class="artPrice"
-                src="./images/price/background-315.jpg"
-                alt="price background"
-              />
+              <img class="artPrice" src="images/price/background315.jpg" alt="price background" />
             </picture>
             <!-- <img class="artPrice" src="./images/art-graphity.jpg" alt="" /> -->
             <div class="blokPrice">
@@ -212,28 +185,21 @@
           <li class="priceList-items">
             <picture>
               <source
-                srcset="./images/price/landscape-315.jpg"
+                srcset="images/price/landscape-315.jpg"
+                type="image/png"
                 media="(max-width: 767px)"
               />
               <source
-                srcset="
-                  ./images/price/landscape-312@1.png  1x,
-                  ./images/price/landscape-312@2x.png 2x
-                "
+                srcset="images/price/landscape-312@1.png 1x, images/price/landscape-312@2x.png 2x"
+                type="image/png"
                 media="(min-width: 1440px)"
               />
               <source
-                srcset="
-                  ./images/price/landscape-216@1.png  1x,
-                  ./images/price/landscape-216@2x.png 2x
-                "
+                srcset="images/price/landscape-216@1.png 1x, images/price/landscape-216@2x.png 2x"
+                type="image/png"
                 media="(min-width: 768px)"
               />
-              <img
-                class="artPrice"
-                src="./images/price/landscape-315.jpg"
-                alt="price landscape"
-              />
+              <img class="artPrice" src="images/price/landscape-315.jpg" alt="price landscape" />
             </picture>
             <!-- <img class="artPrice" src="./images/art-viking.jpg" alt="" /> -->
             <div class="blokPrice">
@@ -243,35 +209,31 @@
                 <span class="painting-price">1200 </span>
                 <span class="painting-square">₴/м2</span>
               </div>
-              <p class="artAbout">
-                Пейзаж, панорама, изображение архитектуры, детализация
-              </p>
+              <p class="artAbout">Пейзаж, панорама, изображение архитектуры, детализация</p>
             </div>
           </li>
           <li class="priceList-items">
             <picture>
               <source
-                srcset="./images/price/imgPeople-315.jpg"
                 media="(max-width: 767px)"
+                type="image/png"
+                srcset="images/price/imgPeople-315.jpg"
               />
               <source
-                srcset="
-                  ./images/price/imgPeople-312@1.png  1x,
-                  ./images/price/imgPeople-312@2x.png 2x
-                "
                 media="(min-width: 1440px)"
+                type="image/png"
+                srcset="images/price/imgPeople-312@1.png 1x, images/price/imgPeople-312@2x.png 2x"
+                type="image/png"
               />
               <source
-                srcset="
-                  ./images/price/imgPeople-217@1.png 1x,
-                  ./images/price/imgPeople-217@2.png 2x
-                "
                 media="(min-width: 768px)"
+                type="image/png"
+                srcset="images/price/imgPeople-217@1.png 1x, images/price/imgPeople-217@2.png 2x"
               />
               <img
                 class="artPrice"
                 src="./images/price/imgPeople-315.jpg"
-                alt="price background"
+                alt="price background girl"
               />
             </picture>
             <!-- <img class="artPrice" src="./images/art-girl.jpg" alt="" /> -->
@@ -283,9 +245,7 @@
                 <span class="painting-square">₴/м2</span>
               </div>
 
-              <p class="artAbout">
-                Детализированная роспись, композиция с фигурами людей
-              </p>
+              <p class="artAbout">Детализированная роспись, композиция с фигурами людей</p>
             </div>
           </li>
         </ul>
@@ -295,18 +255,15 @@
       <div class="container">
         <div class="background bkdPaintiing">
           <div class="paintingCalcBox">
-            <h2 class="paintingCalc-heading" id="paintingCalc">
-              просчитать роспись
-            </h2>
+            <h2 class="paintingCalc-heading" id="paintingCalc">просчитать роспись</h2>
             <div class="paintingCalc-line"></div>
             <div class="paintingCalc-lines"></div>
             <p class="paintingCalc-text">
-              При площади оформления более 50 кв.м предоставляются скидки.
-              Окончательная цена интерьерной росписи уточняется художником на
-              примере конкретного эскиза или фото
+              При площади оформления более 50 кв.м предоставляются скидки. Окончательная цена
+              интерьерной росписи уточняется художником на примере конкретного эскиза или фото
             </p>
           </div>
-          <form class="formCalc" action="" autocomplete="on">
+          <form class="formCalc" autocomplete="on">
             <label class="blockInput" for="user_name">
               <span class="inputName">имя</span
               ><input
@@ -372,10 +329,7 @@
                   srcset="./images/clients/sinergia-grey_tablet.png"
                   media="(min-width: 768px)"
                 />
-                <img
-                  src="./images/clients/molokootfermera-grey_mobile.png"
-                  alt=""
-                />
+                <img src="./images/clients/molokootfermera-grey_mobile.png" alt="" />
               </picture>
               <!-- <img src="./images/molokootfermera-grey.png" alt="" /> -->
             </li>
@@ -393,10 +347,7 @@
                   srcset="./images/clients/eldorado-grey_tablet.png"
                   media="(min-width: 768px)"
                 />
-                <img
-                  src="./images/clients/parkovemisto-grey_mobile.png"
-                  alt=""
-                />
+                <img src="./images/clients/parkovemisto-grey_mobile.png" alt="" />
               </picture>
               <!-- <img src="./images/parkovemisto-grey.png" alt="" /> -->
             </li>
@@ -464,9 +415,7 @@
         <div class="blocSocials">
           <div class="blockContaсts" id="contacts">
             <span class="greeting">Say Hi!</span>
-            <a class="mailLink" href="mailto:artpchela@gmail.com"
-              >artpchela@gmail.com</a
-            >
+            <a class="mailLink" href="mailto:artpchela@gmail.com">artpchela@gmail.com</a>
             <span class="phoneText">телефон</span>
             <a class="telLink" href="tel:+380660069285">+38 066 006 92 85</a>
             <a class="telLink" href="tel:+380660069285">+38 066 006 92 85</a>
@@ -474,10 +423,7 @@
           </div>
           <div class="blockSocSeti">
             <span class="socialText">Социальные сети</span>
-            <a
-              class="blockInsta"
-              href="https://www.instagram.com/artpchelapaint/"
-              target="_blank"
+            <a class="blockInsta" href="https://www.instagram.com/artpchelapaint/" target="_blank"
               ><svg class="iconInsta">
                 <use href="./images/sprite-icons.svg#instagram"></use>
               </svg>
@@ -502,24 +448,16 @@
         <nav class="nav-menu">
           <ul class="nav__List">
             <li class="nav__Item">
-              <a href="#about" class="nav__Link" data-menu="close-modal"
-                >О нас</a
-              >
+              <a href="#about" class="nav__Link" data-menu="close-modal">О нас</a>
             </li>
             <li class="nav__Item">
-              <a href="#portfolio" class="nav__Link" data-menu="close-modal"
-                >Портфолио</a
-              >
+              <a href="#portfolio" class="nav__Link" data-menu="close-modal">Портфолио</a>
             </li>
             <li class="nav__Item">
-              <a href="#price" class="nav__Link" data-menu="close-modal"
-                >Цены</a
-              >
+              <a href="#price" class="nav__Link" data-menu="close-modal">Цены</a>
             </li>
             <li class="nav__Item">
-              <a href="#contacts" class="nav__Link" data-menu="close-modal"
-                >Контакты</a
-              >
+              <a href="#contacts" class="nav__Link" data-menu="close-modal">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -559,10 +497,8 @@
             <use href="./images/sprite-icons.svg#icon-close"></use>
           </svg>
         </button>
-        <h2 class="paintingCalc-heading" id="paintingCalc">
-          просчитать роспись
-        </h2>
-        <form class="formCalc" action="" autocomplete="on">
+        <h2 class="paintingCalc-heading">просчитать роспись</h2>
+        <form class="formCalc" autocomplete="on">
           <label class="blockInput" for="user_name">
             <span class="inputName">имя</span
             ><input

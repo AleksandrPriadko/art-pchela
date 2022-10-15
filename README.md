@@ -1,101 +1,97 @@
-# Webpack starter kit &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+# 📦 webpack Boilerplate
 
-## Developing
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-### Prerequisites
+Sensible webpack 5 boilerplate using Babel, PostCSS and Sass.
 
-Для корректной работы SASS-компилятора и других инструментов, необходимо один
-раз глобально поставить дополнительные пакеты, выполнив в терминале следующие
-команды. Пользователям MacOS ничего делать не нужно.
+## Installation
 
-Пользователям **Windows**, в режиме администратора.
-[Как запусттить Powershell](https://youtu.be/p2tFnxcymwk) в режиме
-администратора.
+Clone this repo and npm install.
 
-```shell
-npm install --global --production windows-build-tools
+```bash
+npm i
 ```
 
-Вот как выглядит процесс успешной установки для пользователей **Windows**.
+## Usage
 
-![Установка windows-build-tools](https://user-images.githubusercontent.com/1426799/45007904-bde9f280-afb4-11e8-8a35-c77dffaffa2a.gif)
+### Development server
 
-Пользователям **Linux**.
-
-```shell
-sudo apt-get install gcc g++ make
-```
-
-### Setting up Dev
-
-Для быстрого старта необходимо склонировать репозиторий.
-
-```shell
-git clone https://github.com/luxplanjay/webpack-starter-kit.git
-```
-
-Переименовать папку сборки именем вашего проекта.
-
-```shell
-mv webpack-starter-kit имя_проекта
-```
-
-Затем перейти в папку проекта.
-
-```shell
-cd имя_проекта
-```
-
-Находясь в папке проекта удалить папку `.git` связанную с репозиторием сборки
-выполнив следующую команду.
-
-```shell
-npx rimraf .git
-```
-
-Установить все зависимости.
-
-```shell
-npm install
-```
-
-И запустить режим разработки.
-
-```shell
+```bash
 npm start
 ```
 
-Во вкладке браузера перейти по адресу
-[http://localhost:4040](http://localhost:4040).
+You can view the development server at `localhost:8080`.
 
-### Building
+### Production build
 
-Для того чтобы создать оптимизированные файлы для хостинга, необходимо выполнить
-следующую команду. В корне проекта появится папка `build` со всеми
-оптимизированными ресурсами.
-
-```shell
+```bash
 npm run build
 ```
 
-### Deploying/Publishing
+> Note: Install [http-server](https://www.npmjs.com/package/http-server) globally to deploy a simple server.
 
-Сборка может автоматически деплоить билд на GitHub Pages удаленного (remote)
-репозитория. Для этого необходимо в файле `package.json` отредактировать поле
-`homepage`, заменив имя пользователя и репозитория на свои.
-
-```json
-"homepage": "https://имя_пользователя.github.io/имя_репозитория"
+```bash
+npm i -g http-server
 ```
 
-После чего в терминале выполнить следующую команду.
+You can view the deploy by creating a server in `dist`.
 
-```shell
-npm run deploy
+```bash
+cd dist && http-server
 ```
 
-Если нет ошибок в коде и свойство `homepage` указано верно, запустится сборка
-проекта в продакшен, после чего содержимое папки `build` будет помещено в ветку
-`gh-pages` на удаленном (remote) репозитории. Через какое-то время живую
-страницу можно будет посмотреть по адресу указанному в отредактированном
-свойстве `homepage`.
+## Features
+
+- [webpack](https://webpack.js.org/)
+- [Babel](https://babeljs.io/)
+- [Sass](https://sass-lang.com/)
+- [PostCSS](https://postcss.org/)
+
+## Dependencies
+
+### webpack
+
+- [`webpack`](https://github.com/webpack/webpack) - Module and asset bundler.
+- [`webpack-cli`](https://github.com/webpack/webpack-cli) - Command line interface for webpack
+- [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) - Development server for webpack
+- [`webpack-merge`](https://github.com/survivejs/webpack-merge) - Simplify development/production configuration
+- [`cross-env`](https://github.com/kentcdodds/cross-env) - Cross platform configuration
+
+### Babel
+
+- [`@babel/core`](https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
+- [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties directly on a class (an example Babel config)
+- [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
+
+### Loaders
+
+- [`babel-loader`](https://webpack.js.org/loaders/babel-loader/) - Transpile files with Babel and webpack
+- [`sass-loader`](https://webpack.js.org/loaders/sass-loader/) - Load SCSS and compile to CSS
+  - [`sass`](https://www.npmjs.com/package/sass) - Node Sass
+- [`postcss-loader`](https://webpack.js.org/loaders/postcss-loader/) - Process CSS with PostCSS
+  - [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) - Sensible defaults for PostCSS
+- [`css-loader`](https://webpack.js.org/loaders/css-loader/) - Resolve CSS imports
+- [`style-loader`](https://webpack.js.org/loaders/style-loader/) - Inject CSS into the DOM
+
+### Plugins
+
+- [`clean-webpack-plugin`](https://github.com/johnagan/clean-webpack-plugin) - Remove/clean build folders
+- [`copy-webpack-plugin`](https://github.com/webpack-contrib/copy-webpack-plugin) - Copy files to build directory
+- [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) - Generate HTML files from template
+- [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - Extract CSS into separate files
+- [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - Optimize and minimize CSS assets
+
+### Linters
+
+- [`eslint`](https://github.com/eslint/eslint) - Enforce styleguide across application
+- [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) - Implement prettier rules
+  - - [`prettier`](https://github.com/prettier/prettier) - Dependency for `prettier-webpack-plugin` plugin
+- [`eslint-import-resolver-webpack`](https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack) - Throw exceptions for import/export in webpack
+
+## Author
+
+- [Tania Rascia](https://www.taniarascia.com)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).

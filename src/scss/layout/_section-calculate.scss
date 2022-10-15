@@ -10,47 +10,48 @@
 }
 .hero-img {
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 .img-girls {
   @media screen and (max-width: 767px) {
     display: block;
     position: absolute;
     top: 185px;
-    left: -30px;
+    left: 0px;
   }
   @media screen and (min-width: 768px) {
     //display: block;
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 208px;
-    left: -50px;
+    left: 0px;
   }
   @media screen and (min-width: 1440px) {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 0px;
-    left: 640px;
+    left: 743px;
   }
 }
 .blockCalc {
   overflow: hidden;
+  //position: relative;
   @media screen and (max-width: 767px) {
     display: flex;
-    position: relative;
-    z-index: 1;
+    // position: relative;
+    // z-index: 1;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 29px;
     padding-bottom: 46px;
   }
   @media screen and (min-width: 768px) {
-    position: relative;
-    z-index: 2;
+    // position: relative;
+    // z-index: 2;
   }
   @media screen and (min-width: 1440px) {
-    position: relative;
-    z-index: 2;
+    // position: relative;
+    // z-index: 2;
     height: 800px;
   }
 }
@@ -93,19 +94,21 @@
 
     margin-bottom: 210px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and(max-width: 1439px) {
     position: absolute;
     top: 175px;
     left: 391px;
   }
   @media screen and (min-width: 1440px) {
     position: absolute;
+    width: 240px;
     top: 395px;
-    left: 1035px;
+    right: 90px;
   }
   & span {
     display: block;
     @include font($fontAvangard, normal, $color-black);
+    margin: 0;
     @media screen and (max-width: 767px) {
       width: 160px;
       font-size: 24px;
@@ -166,7 +169,7 @@
   }
   @media screen and (min-width: 1440px) {
     width: 247px;
-
+    right: -80px;
     font-size: 18px;
     line-height: 22px;
     text-align: left;
